@@ -1,0 +1,16 @@
+.footer {
+  margin-top: $layoutCommonPadding;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    line-height: calc($layoutCommonPadding * 2);
+    color: $textColorMuted;
+  }
+
+  &__link {
+    @mixin link-states $textColorMuted;
+  }
+}

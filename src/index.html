@@ -1,19 +1,31 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Ossert</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="page">
-        <h1 class="page__title">
-            Hello from edited page
-        </h1>
-    </div>
+<body class="layout">
+    <header class="header">
+        <div class="width-container header__content">
+            <a href="/" class="logo header__logo">Ossert</a>
+            <input type="text" class="search header__search" placeholder="Type package name...">
+        </div>
+    </header>
+    <main class="layout__content">
+        <div class="width-container">
+            <section class="panel">
+                some content
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="width-container footer__content">
+            <span>&copy; 2016 <a href="http://evilmartians.com" class="footer__link">Evil Martians</a></span>
+            <span>Made with <a href="https://www.ruby-lang.org" class="footer__link" rel="nofollow">Ruby</a>, <a href="http://www.sinatrarb.com/" class="footer__link" rel="nofollow">Sinatra</a>, <a href="http://rom-rb.org/" class="footer__link" rel="nofollow">ROM</a> by Sergey Dolganov</span>
+        </div>
+    </footer>
 </body>
 </html>

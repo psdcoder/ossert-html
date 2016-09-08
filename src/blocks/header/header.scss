@@ -1,0 +1,20 @@
+.header {
+  background-color: $themePrimary;
+  padding: calc($layoutCommonPadding / 2) 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    line-height: calc($layoutCommonPadding * 2);
+  }
+
+  &__search {
+    flex-grow: 1;
+    max-width: 60%;
+    margin-left: calc($layoutCommonPadding * 2);
+  }
+}
