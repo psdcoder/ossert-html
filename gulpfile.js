@@ -1,0 +1,127 @@
+const path = require('path');
+const $ = require('gulp-load-plugins')();
+const gulp = require('gulp');
+const del = require('del');
+const bs = require('browser-sync').create();
+
+const EXTS_TO_FREEZE = 'jpg|jpeg|png|svg|css';
+const SRC_DIR = path.join(__dirname, 'src');
+const BUILD_DIR = 'build';
+const BLOCKS_DIR = path.join(SRC_DIR, 'blocks');
+const PATHS = {
+    COMMON_STYLES: path.join(SRC_DIR, 'common', '**', '*.scss'),
+    MIXINS_STYLES: path.join(SRC_DIR, 'mixins', '**', '*.scss'),
+    BLOCKS_STYLES: path.join(BLOCKS_DIR, '**', '*.scss'),
+    BLOCKS_ASSETS: path.join(BLOCKS_DIR, '**', '*.!(scss)'),
+    ROOT_HTML: path.join(SRC_DIR, '*.html'),
+    POSTCSS: path.join(__dirname, 'postcss', '*.js')
+};
+
+gulp.task('clean', function () {
+    return del(BUILD_DIR);
+});
+
+gulp.task('blocks:styles', function () {
+    return gulp.src([PATHS.COMMON_STYLES, PATHS.MIXINS_STYLES, PATHS.BLOCKS_STYLES])
+        .pipe($.plumber({ errorHandler: notifyOnErrorFactory('CSS')}))
+        .pipe($.sourcemaps.init())
+        .pipe($.postcss([
+            require('postcss-mixins'),
+            require('postcss-simple-vars')({
+                variables: require('./postcss/css-vars')
+            }),
+            require('postcss-nested'),
+            require('postcss-custom-media')({
+                extensions: require('./postcss/css-media')
+            }),
+            require('postcss-media-minmax'),
+            require('postcss-utilities'),
+            require('postcss-color-function'),
+            require('postcss-easings'),
+            require('postcss-calc'),
+            require('autoprefixer')
+        ]))
+        .pipe($.remember('css-remember'))
+        .pipe($.rewriteCss({ destination: SRC_DIR }))
+        .pipe($.concat('styles.css'))
+        .pipe($.sourcemaps.write('.'))
+        .pipe(gulp.dest(BUILD_DIR));
+});
+
+gulp.task('blocks:assets', function () {
+    return gulp.src(PATHS.BLOCKS_ASSETS, { base: SRC_DIR })
+        .pipe($.plumber({ errorHandler: notifyOnErrorFactory('Blocks assets')}))
+        .pipe($.newer(BUILD_DIR))
+        .pipe(gulp.dest(BUILD_DIR))
+});
+
+gulp.task('html', function () {
+    return gulp.src(PATHS.ROOT_HTML)
+        .pipe($.plumber({ errorHandler: notifyOnErrorFactory('Html')}))
+        .pipe($.newer(BUILD_DIR))
+        .pipe(gulp.dest(BUILD_DIR))
+});
+
+gulp.task('revision:hash', function () {
+    return gulp.src(path.join(BUILD_DIR, '**', '*.*(' + EXTS_TO_FREEZE + ')'))
+        .pipe($.rev())
+        .pipe($.revDeleteOriginal())
+        .pipe(gulp.dest(BUILD_DIR))
+        .pipe($.rev.manifest())
+        .pipe(gulp.dest(BUILD_DIR));
+});
+
+gulp.task('revision:replace', function () {
+    return gulp.src(path.join(BUILD_DIR, '**', '*.*(html|css)'))
+        .pipe($.revReplace({ manifest: gulp.src(path.join(BUILD_DIR, 'rev-manifest.json')) }))
+        .pipe(gulp.dest(BUILD_DIR));
+});
+
+gulp.task('watch', function () {
+    gulp.watch([PATHS.COMMON_STYLES, PATHS.MIXINS_STYLES, PATHS.BLOCKS_STYLES], gulp.parallel('blocks:styles', 'lint:styles')).on('unlink', function (filePath) {
+        const resolvedFilePath = path.resolve(filePath);
+        $.remember.forget('css-remember', resolvedFilePath);
+        delete $.cached.caches['css-cached'][resolvedFilePath];
+    });
+    gulp.watch(PATHS.BLOCKS_ASSETS, gulp.series('blocks:assets'));
+    gulp.watch(PATHS.ROOT_HTML, gulp.series('html'));
+    gulp.watch(PATHS.POSTCSS).on('change', function (path) {
+        delete require.cache[path];
+        gulp.series('blocks:styles', 'lint:styles')();
+    });
+});
+
+gulp.task('serve', function () {
+    bs.init({ server: BUILD_DIR });
+});
+
+gulp.task('serve:watch', function () {
+    bs.init({
+        server: BUILD_DIR
+    });
+    bs.watch(BUILD_DIR).on('change', bs.reload);
+});
+
+gulp.task('lint:styles', function () {
+    return gulp
+        .src(PATHS.BLOCKS_STYLES)
+        .pipe($.plumber({ errorHandler: notifyOnErrorFactory('Lint:styles')}))
+        .pipe($.stylelint({ reporters: [{ formatter: 'string', console: true }]}));
+});
+
+function notifyOnErrorFactory(title) {
+    return $.notify.onError(function (err) {
+        return {
+            title: title,
+            message: err.message
+        };
+    });
+}
+
+
+
+gulp.task('default', gulp.series('clean', gulp.parallel('blocks:styles', 'lint:styles', 'blocks:assets'), 'html'));
+gulp.task('prod', gulp.series('default', 'revision:hash', 'revision:replace'));
+gulp.task('prod:serve', gulp.series('default', 'revision:hash', 'revision:replace', 'serve'));
+gulp.task('dev', gulp.series('default', gulp.parallel('watch', 'serve:watch')));
+gulp.task('dev:serve', gulp.series('default', 'serve'));
