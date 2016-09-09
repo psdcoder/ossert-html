@@ -6,6 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (--tablet) {
+      flex-direction: column;
+    }
   }
 
   &__logo {
@@ -16,5 +20,11 @@
     flex-grow: 1;
     max-width: 60%;
     margin-left: calc($layoutCommonPadding * 2);
+
+    @media (--tablet) {
+      max-width: none;
+      width: 100%;
+      margin: calc($layoutCommonPadding / 2) 0 0;
+    }
   }
 }

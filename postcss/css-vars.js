@@ -12,6 +12,22 @@ module.exports = {
     themePrimary: '#CC342D',
     themeSecondary: '#585450',
 
-    textColorMain: '#111',
-    textColorMuted: '#888'
+    textColoPrimary: '#111',
+    textColorSecondary: '#555',
+    textColorMuted: '#888',
+
+    controlHeight: '40px',
+    iconSize: '32px',
+
+    buttonPrimaryColor: '#cc342d',
+    buttonPrimaryBg: '#fff',
+    buttonSecondaryColor: '#868686',
+    buttonSecondaryBg: '#fff',
+
+    rateCircleSize: '40px',
+    rateA: '#00aa01',
+    rateB: '#81cc00',
+    rateC: '#ffed03',
+    rateD: '#f87700',
+    rateE: '#ee0000'
 };

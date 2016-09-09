@@ -1,0 +1,28 @@
+.button {
+  border: 1px solid transparent;
+  height: $controlHeight;
+  line-height: $iconSize;
+  border-radius: $layoutBorderRadius;
+  padding: calc(($controlHeight - $iconSize - 2) / 2) calc(($controlHeight - $iconSize - 2) * 2);
+  cursor: pointer;
+
+  &_style_primary {
+    @mixin control-style $buttonPrimaryColor, $buttonPrimaryBg;
+    @mixin button-icon-style $buttonPrimaryColor;
+  }
+
+  &_style_secondary {
+    @mixin control-style $buttonSecondaryColor, $buttonPrimaryBg;
+    @mixin button-icon-style $buttonSecondaryColor, $buttonSecondaryBg;
+  }
+
+  &__icon {
+    &_prefix {
+      margin-right: calc($controlHeight - $iconSize - 2);
+    }
+
+    &_suffix {
+      margin-left: calc($controlHeight - $iconSize - 2);
+    }
+  }
+}

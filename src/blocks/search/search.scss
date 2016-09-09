@@ -1,19 +1,13 @@
 .search {
-  border: 1px solid color($themePrimary lightness(-5%));
-  border-radius: $layoutBorderRadius;
-  padding: 5px 7px;
-  font-size: 17px;
-  line-height: calc($layoutCommonPadding * 2);
-  height: calc($layoutCommonPadding * 2);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  &__input {
+    flex-grow: 1;
+    border: 1px solid;
+    padding: 5px 7px;
+    font-size: 17px;
+    line-height: calc($layoutCommonPadding * 2);
+    height: calc($layoutCommonPadding * 2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
 
-  &:hover {
-    border-color: color($themePrimary lightness(-10%));
-    outline: none;
-  }
-
-  &:focus {
-    border-color: color($themePrimary lightness(-15%));
-    outline: none;
+    @mixin control-style $buttonPrimaryColor, $buttonPrimaryBg;
   }
 }

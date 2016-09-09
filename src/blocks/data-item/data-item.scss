@@ -1,0 +1,49 @@
+.data-item {
+  &__indicator {
+    box-sizing: content-box;
+    display: inline-block;
+    width: $rateCircleSize;
+    height: $rateCircleSize;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    line-height: $rateCircleSize;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+
+    &_rate_a {
+      background-color: $rateA;
+      border-color: color($rateA lightness(-8%));
+    }
+
+    &_rate_b {
+      background-color: $rateB;
+      border-color: color($rateB lightness(-8%));
+    }
+
+    &_rate_c {
+      background-color: $rateC;
+      border-color: color($rateC lightness(-8%));
+    }
+
+    &_rate_d {
+      background-color: $rateD;
+      border-color: color($rateD lightness(-8%));
+    }
+
+    &_rate_e {
+      background-color: $rateE;
+      border-color: color($rateE lightness(-8%));
+    }
+  }
+
+  &__title {
+    margin-left: calc($layoutCommonPadding / 2);
+  }
+
+  &__value {
+    font-weight: bold;
+  }
+}

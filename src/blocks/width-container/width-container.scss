@@ -1,5 +1,12 @@
 .width-container {
-  width: auto;
+  width: 100%;
   max-width: $layoutMaxWidth;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (--desktop) {
+    width: auto;
+    margin-left: calc($layoutCommonPadding / 2);
+    margin-right: calc($layoutCommonPadding / 2);
+  }
 }

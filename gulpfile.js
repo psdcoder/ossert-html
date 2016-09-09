@@ -2,6 +2,7 @@ const path = require('path');
 const $ = require('gulp-load-plugins')();
 const gulp = require('gulp');
 const del = require('del');
+const fs = require('fs');
 const bs = require('browser-sync').create();
 
 const EXTS_TO_FREEZE = 'jpg|jpeg|png|svg|css';
@@ -14,8 +15,10 @@ const PATHS = {
     BLOCKS_STYLES: path.join(BLOCKS_DIR, '**', '*.scss'),
     BLOCKS_ASSETS: path.join(BLOCKS_DIR, '**', '*.!(scss)'),
     ROOT_HTML: path.join(SRC_DIR, '*.html'),
-    POSTCSS: path.join(__dirname, 'postcss', '*.js')
+    POSTCSS: path.join(__dirname, 'postcss', '*.js'),
+    SVG_SPRITE: path.join(BLOCKS_DIR, 'icon', 'icons-sprite.svg')
 };
+let svgSprite = loadSvgSprite(PATHS.SVG_SPRITE);
 
 gulp.task('clean', function () {
     return del(BUILD_DIR);
@@ -49,7 +52,7 @@ gulp.task('blocks:styles', function () {
 });
 
 gulp.task('blocks:assets', function () {
-    return gulp.src(PATHS.BLOCKS_ASSETS, { base: SRC_DIR })
+    return gulp.src([PATHS.BLOCKS_ASSETS, `!${PATHS.SVG_SPRITE}`], { base: SRC_DIR })
         .pipe($.plumber({ errorHandler: notifyOnErrorFactory('Blocks assets')}))
         .pipe($.newer(BUILD_DIR))
         .pipe(gulp.dest(BUILD_DIR))
@@ -58,7 +61,7 @@ gulp.task('blocks:assets', function () {
 gulp.task('html', function () {
     return gulp.src(PATHS.ROOT_HTML)
         .pipe($.plumber({ errorHandler: notifyOnErrorFactory('Html')}))
-        .pipe($.newer(BUILD_DIR))
+        .pipe($.replace('<!-- svgSprite -->', svgSprite))
         .pipe(gulp.dest(BUILD_DIR))
 });
 
@@ -81,14 +84,23 @@ gulp.task('watch', function () {
     gulp.watch([PATHS.COMMON_STYLES, PATHS.MIXINS_STYLES, PATHS.BLOCKS_STYLES], gulp.parallel('blocks:styles', 'lint:styles')).on('unlink', function (filePath) {
         const resolvedFilePath = path.resolve(filePath);
         $.remember.forget('css-remember', resolvedFilePath);
-        delete $.cached.caches['css-cached'][resolvedFilePath];
+
+        if ($.cached && $.cached.caches && $.caches['css-cached']) {
+            delete $.cached.caches['css-cached'][resolvedFilePath];
+        }
     });
-    gulp.watch(PATHS.BLOCKS_ASSETS, gulp.series('blocks:assets'));
+    gulp.watch([PATHS.BLOCKS_ASSETS, `!${PATHS.SVG_SPRITE}`], gulp.series('blocks:assets'));
     gulp.watch(PATHS.ROOT_HTML, gulp.series('html'));
     gulp.watch(PATHS.POSTCSS).on('change', function (path) {
         delete require.cache[path];
         gulp.series('blocks:styles', 'lint:styles')();
     });
+    gulp.watch(PATHS.SVG_SPRITE).on('change', function (path) {
+        loadSvgSprite(path, function (data) {
+            svgSprite = data;
+            gulp.series('html')();
+        });
+    })
 });
 
 gulp.task('serve', function () {
@@ -110,15 +122,22 @@ gulp.task('lint:styles', function () {
 });
 
 function notifyOnErrorFactory(title) {
-    return $.notify.onError(function (err) {
-        return {
-            title: title,
-            message: err.message
-        };
-    });
+    return $.notify.onError(err => ({ title: title, message: err.message }));
 }
 
+function loadSvgSprite(path, cb) {
+    if (cb) {
+        fs.readFile(path, 'utf8', (err, data) => {
+            if (err) {
+                throw err;
+            }
 
+            cb(data);
+        });
+    } else {
+        return fs.readFileSync(path, 'utf8');
+    }
+}
 
 gulp.task('default', gulp.series('clean', gulp.parallel('blocks:styles', 'lint:styles', 'blocks:assets'), 'html'));
 gulp.task('prod', gulp.series('default', 'revision:hash', 'revision:replace'));

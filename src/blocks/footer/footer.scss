@@ -1,13 +1,24 @@
 .footer {
   margin-top: $layoutCommonPadding;
+  margin-bottom: calc($layoutCommonPadding / 2);
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
-    line-height: calc($layoutCommonPadding * 2);
+    line-height: calc($layoutCommonPadding * 1.5);
     color: $textColorMuted;
+
+    @media (--tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__content-item {
+    @media (--tablet) {
+      text-align: center;
+    }
   }
 
   &__link {

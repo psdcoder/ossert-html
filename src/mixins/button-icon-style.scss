@@ -1,0 +1,23 @@
+@define-mixin button-icon-style $color {
+  > .button__icon {
+    fill: $color;
+  }
+
+  &:hover {
+    > .button__icon {
+      fill: color($color lightness(+12%));
+    }
+  }
+
+  &:focus {
+    > .button__icon {
+      fill: color($color lightness(-5%));
+    }
+  }
+
+  &:active {
+    > .button__icon {
+      fill: color($color lightness(-15%));
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.link {
+  display: inline-block;
+  vertical-align: middle;
+
+  @mixin link-states $themePrimary;
+
+  &_no-underline {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
