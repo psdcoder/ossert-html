@@ -6,7 +6,7 @@
   min-height: 100vh;
   margin: 0;
   font-family: $fontFamily;
-  color: $textColoPrimary;
+  color: $textColorPrimary;
   background-color: $layoutPrimaryBg;
 
   &__content {
@@ -14,37 +14,7 @@
     flex-grow: 1;
   }
 
-  /* Top row */
-  &__top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: $layoutCommonPadding;
-  }
-
-  &__top-row-header {
-    margin: 0;
-    color: $textColorSecondary;
-  }
-
-  &__top-row-header-prefix {
-    vertical-align: middle;
-  }
-
-  /* Content */
-  &__main {
-    display: flex;
-  }
-
-  &__main-sidebar&__main-sidebar {
-    width: 120px;
-    text-align: center;
-    padding-right: calc($layoutCommonPadding * 1.5);
-  }
-
-  &__main-content {
-    flex-grow: 1;
-    border-left: 1px solid $layoutBorder;
-    padding: 0 calc($layoutCommonPadding * 1.5);
+  &__content-section + &__content-section {
+    margin-top: $layoutCommonPadding;
   }
 }

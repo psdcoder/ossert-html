@@ -10,6 +10,7 @@ const SRC_DIR = path.join(__dirname, 'src');
 const BUILD_DIR = 'build';
 const BLOCKS_DIR = path.join(SRC_DIR, 'blocks');
 const PATHS = {
+    VENDORS_STYLES: path.join(SRC_DIR, 'vendors', '*.*'),
     COMMON_STYLES: path.join(SRC_DIR, 'common', '**', '*.scss'),
     MIXINS_STYLES: path.join(SRC_DIR, 'mixins', '**', '*.scss'),
     BLOCKS_STYLES: path.join(BLOCKS_DIR, '**', '*.scss'),
@@ -25,7 +26,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('blocks:styles', function () {
-    return gulp.src([PATHS.COMMON_STYLES, PATHS.MIXINS_STYLES, PATHS.BLOCKS_STYLES])
+    return gulp.src([PATHS.VENDORS_STYLES, PATHS.COMMON_STYLES, PATHS.MIXINS_STYLES, PATHS.BLOCKS_STYLES])
         .pipe($.plumber({ errorHandler: notifyOnErrorFactory('CSS')}))
         .pipe($.sourcemaps.init())
         .pipe($.postcss([
@@ -81,7 +82,7 @@ gulp.task('revision:replace', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch([PATHS.COMMON_STYLES, PATHS.MIXINS_STYLES, PATHS.BLOCKS_STYLES], gulp.parallel('blocks:styles', 'lint:styles')).on('unlink', function (filePath) {
+    gulp.watch([PATHS.VENDORS_STYLES, PATHS.COMMON_STYLES, PATHS.MIXINS_STYLES, PATHS.BLOCKS_STYLES], gulp.parallel('blocks:styles', 'lint:styles')).on('unlink', function (filePath) {
         const resolvedFilePath = path.resolve(filePath);
         $.remember.forget('css-remember', resolvedFilePath);
 

@@ -9,25 +9,27 @@ module.exports = {
     layoutBorder: '#d8d8d8',
     layoutBorderRadius: '2px',
 
-    themePrimary: '#CC342D',
+    themePrimary: '#2f2c2c',
     themeSecondary: '#585450',
 
-    textColoPrimary: '#111',
+    textColorPrimary: '#111',
     textColorSecondary: '#555',
     textColorMuted: '#888',
 
     controlHeight: '40px',
     iconSize: '32px',
 
+    linkColor: '#CC342D',
+
     buttonPrimaryColor: '#cc342d',
     buttonPrimaryBg: '#fff',
     buttonSecondaryColor: '#868686',
     buttonSecondaryBg: '#fff',
 
-    rateCircleSize: '40px',
-    rateA: '#00aa01',
-    rateB: '#81cc00',
-    rateC: '#ffed03',
-    rateD: '#f87700',
-    rateE: '#ee0000'
+    indicatorCircleSize: '40px',
+    indicatorRateA: '#00aa01',
+    indicatorRateB: '#81cc00',
+    indicatorRateC: '#ffed03',
+    indicatorRateD: '#f87700',
+    indicatorRateE: '#ee0000'
 };

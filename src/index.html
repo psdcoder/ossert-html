@@ -14,8 +14,8 @@
             <a href="/" class="logo header__logo">Ossert</a>
             <form action="#" class="controls-group header__search search">
                 <input type="text" class="search__input controls-group__item" placeholder="Type package name...">
-                <button class="controls-group__item button button_style_primary search__submit">
-                    <svg class="icon icon_type_search button__icon">
+                <button class="controls-group__item button button_style_raw search__submit">
+                    <svg class="icon icon_type_search button__icon search__submit-icon">
                         <use xlink:href="#icon_type_search"></use>
                     </svg>
                 </button>
@@ -23,212 +23,259 @@
         </div>
     </header>
     <main class="layout__content width-container panel">
-        <section class="layout__top-row">
-            <h1 class="layout__top-row-header">
-                <span class="layout__top-row-header-prefix">Analysis for project:</span> <a class="link link_no-underline" rel="nofollow" target="_blank" href="//rubygems.org/gems/gon">gon</a>
-            </h1>
-            <div class="controls-group">
-                <button class="controls-group__item button button_style_secondary">
-                    <svg class="icon icon_type_list button__icon">
-                        <use xlink:href="#icon_type_list"></use>
-                    </svg>
-                </button>
-                <button class="controls-group__item button button_style_secondary">
-                    <svg class="icon icon_type_chart button__icon">
-                        <use xlink:href="#icon_type_chart"></use>
-                    </svg>
-                </button>
-            </div>
-        </section>
-        <section class="layout__main">
-            <ul class="layout__main-sidebar years years">
-                <li class="years__item years__item_active">
-                    <a class="link years__link" href="#">Total</a>
-                </li>
-                <li class="years__item">
-                    <a class="link years__link" href="#">2016</a>
-                </li>
-                <li class="years__item">
-                    <a class="link years__link" href="#">2015</a>
-                </li>
-                <li class="years__item">
-                    <a class="link years__link" href="#">2014</a>
-                </li>
-                <li class="years__item">
-                    <a class="link years__link" href="#">2013</a>
-                </li>
-                <li class="years__item">
-                    <a class="link years__link" href="#">2012</a>
-                </li>
-            </ul>
-            <div class="layout__main-content">
-                <ul class="tabs">
-                    <li class="tabs__item tabs__item_active">
-                        <a href="#" class="tabs__link link">Full year</a>
+        <section class="layout__content-section">
+            <div class="gem">
+                <div class="gem__info-row gem__info-row_header">
+                    <h1 class="gem__header">
+                        <span class="gem__header-prefix">Analysis for project:</span> <a class="link link_no-underline" rel="nofollow" target="_blank" href="//rubygems.org/gems/gon">gon</a>
+                    </h1>
+                    <div class="gem__indicators">
+                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_b" data-balloon="Agility actions: whole life" data-balloon-pos="left">A(w)</span>
+                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_c" data-balloon="Agility actions: last year" data-balloon-pos="left">A(l)</span>
+                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_d" data-balloon="Community actions: whole life" data-balloon-pos="left">C(w)</span>
+                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_a" data-balloon="Community actions: whole life" data-balloon-pos="left">C(l)</span>
+                    </div>
+                </div>
+                <ul class="gem__info-row gem__info-row_info-columns">
+                    <li class="gem__info-column">
+                        <h6 class="gem__info-column-title">Current Version</h6>
+                        <span class="gem__info-column-value">6.1.0</span>
                     </li>
-                    <li class="tabs__item">
-                        <a href="#" class="tabs__link link">Jan - Mar</a>
+                    <li class="gem__info-column">
+                        <h6 class="gem__info-column-title">Downloads</h6>
+                        <span class="gem__info-column-value">2047815</span>
                     </li>
-                    <li class="tabs__item">
-                        <a href="#" class="tabs__link link">Apr - Jun</a>
+                    <li class="gem__info-column">
+                        <h6 class="gem__info-column-title">Releases</h6>
+                        <span class="gem__info-column-value">49</span>
                     </li>
-                    <li class="tabs__item">
-                        <a href="#" class="tabs__link link">Jul - Sep</a>
+                    <li class="gem__info-column">
+                        <h6 class="gem__info-column-title">Last release</h6>
+                        <span class="gem__info-column-value">2 month ago</span>
                     </li>
-                    <li class="tabs__item">
-                        <a href="#" class="tabs__link link">Oct - Dec</a>
+                    <li class="gem__info-column">
+                        <h6 class="gem__info-column-title">First Release</h6>
+                        <span class="gem__info-column-value">5 years ago</span>
                     </li>
                 </ul>
-                <div class="columns">
-                    <div class="columns__item data-block">
-                        <h5 class="data-block__header">Community actions</h5>
-                        <ul class="data-block__list">
-                            <li class="data-block__list-item data-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">B</span>
-                                <span class="data-item__title">Users creating issues:</span>
-                                <span class="data-item__value">113</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">B</span>
-                                <span class="data-item__title">Users commenting issues:</span>
-                                <span class="data-item__value">181</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">C</span>
-                                <span class="data-item__title">Users creating PR:</span>
-                                <span class="data-item__value">59</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_e">B</span>
-                                <span class="data-item__title">Contributors:</span>
-                                <span class="data-item__value">39</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_c">C</span>
-                                <span class="data-item__title">Watchers:</span>
-                                <span class="data-item__value">46</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_d">B</span>
-                                <span class="data-item__title">Forks:</span>
-                                <span class="data-item__value">140</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_a">A</span>
-                                <span class="data-item__title">Users involved:</span>
-                                <span class="data-item__value">2502</span>
-                            </li>
-                        </ul>
+                <p class="gem__info-row gem__description text">
+                    If you need to send some data to your js files and you don't want to do this with long way trough views and parsing - use this force!
+                </p>
+                <div class="gem__info-row gem__info-row_buttons">
+                    <button class="gem__button-info button button_style_primary">Website</button>
+                    <button class="gem__button-info button button_style_primary">RDoc</button>
+                    <button class="gem__button-info button button_style_primary">Wiki</button>
+                    <button class="gem__button-info button button_style_primary">Source Code</button>
+                    <button class="gem__button-info button button_style_primary">Bug Tracker</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="layout__content-section">
+            <div class="gem-statistic">
+                <ul class="gem-statistic__sidebar years years">
+                    <li class="years__item">
+                        <a class="link years__link" href="#">Total</a>
+                    </li>
+                    <li class="years__item years__item_active">
+                        <a class="link years__link" href="#">2016</a>
+                    </li>
+                    <li class="years__item">
+                        <a class="link years__link" href="#">2015</a>
+                    </li>
+                    <li class="years__item">
+                        <a class="link years__link" href="#">2014</a>
+                    </li>
+                    <li class="years__item">
+                        <a class="link years__link" href="#">2013</a>
+                    </li>
+                    <li class="years__item">
+                        <a class="link years__link" href="#">2012</a>
+                    </li>
+                </ul>
+                <div class="gem-statistic__content">
+                    <div class="gem-statistic__view-toogler-container">
+                        <div class="controls-group toggler">
+                            <button class="controls-group__item toggler__item toggler__item_active button button_style_secondary">
+                                <svg class="icon icon_type_list button__icon toggler__item-icon">
+                                    <use xlink:href="#icon_type_list"></use>
+                                </svg>
+                            </button>
+                            <button class="controls-group__item toggler__item button button_style_secondary">
+                                <svg class="icon icon_type_chart button__icon toggler__item-icon">
+                                    <use xlink:href="#icon_type_chart"></use>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    <div class="columns__item data-block">
-                        <h5 class="data-block__header">Agility actions</h5>
-                        <ul class="data-block__list">
-                            <li class="data-block__list-item data-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">B</span>
-                                <span class="data-item__title">Issues active:</span>
-                                <span class="data-item__value">17.19%</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">B</span>
-                                <span class="data-item__title">Issues non owner:</span>
-                                <span class="data-item__value">99.22%</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">C</span>
-                                <span class="data-item__title">Issues with contrib comments:</span>
-                                <span class="data-item__value">83.59%</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_e">B</span>
-                                <span class="data-item__title">Issues all:</span>
-                                <span class="data-item__value">128</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_c">C</span>
-                                <span class="data-item__title">Issues closed:</span>
-                                <span class="data-item__value">82.81%</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_d">B</span>
-                                <span class="data-item__title">PR active:</span>
-                                <span class="data-item__value">0.0%</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_a">A</span>
-                                <span class="data-item__title">PR non owner:</span>
-                                <span class="data-item__value">100.0%</span>
-                            </li>
-                            <li class="data-block__list-item data-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">B</span>
-                                <span class="data-item__title">PR with contrib comments:</span>
-                                <span class="data-item__value">78.57%</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">B</span>
-                                <span class="data-item__title">PR all:</span>
-                                <span class="data-item__value">84</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">C</span>
-                                <span class="data-item__title">PR closed:</span>
-                                <span class="data-item__value">100.0%</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_e">B</span>
-                                <span class="data-item__title">First PR date:</span>
-                                <span class="data-item__value">Wed 7, Sep 2016</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_c">C</span>
-                                <span class="data-item__title">Last PR date:</span>
-                                <span class="data-item__value">Fri 9, Sep 2016</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_d">B</span>
-                                <span class="data-item__title">First issue date:</span>
-                                <span class="data-item__value">Wed 7, Sep 2016</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_a">A</span>
-                                <span class="data-item__title">Last issue date:</span>
-                                <span class="data-item__value">Sat 10, Sep 2016</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_b">C</span>
-                                <span class="data-item__title">Last release date:</span>
-                                <span class="data-item__value">Sat 10, Sep 2016</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_e">B</span>
-                                <span class="data-item__title">Releases:</span>
-                                <span class="data-item__value">49</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_c">C</span>
-                                <span class="data-item__title">Commits since last release:</span>
-                                <span class="data-item__value">9</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_d">B</span>
-                                <span class="data-item__title">Last year commits:</span>
-                                <span class="data-item__value">52</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_a">A</span>
-                                <span class="data-item__title">Total downloads:</span>
-                                <span class="data-item__value">2,186,416</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_d">B</span>
-                                <span class="data-item__title">Life period:</span>
-                                <span class="data-item__value">5+ years</span>
-                            </li>
-                            <li class="data-block__list-item">
-                                <span class="data-item__indicator data-item__indicator_rate_a">A</span>
-                                <span class="data-item__title">Last changed:</span>
-                                <span class="data-item__value">Sat 10, Sep 2016</span>
-                            </li>
-                        </ul>
+                    <ul class="gem-statistic__tabs tabs">
+                        <li class="tabs__item tabs__item_active">
+                            <a href="#" class="tabs__link link">Full year</a>
+                        </li>
+                        <li class="tabs__item">
+                            <a href="#" class="tabs__link link">Jan - Mar</a>
+                        </li>
+                        <li class="tabs__item">
+                            <a href="#" class="tabs__link link">Apr - Jun</a>
+                        </li>
+                        <li class="tabs__item">
+                            <a href="#" class="tabs__link link">Jul - Sep</a>
+                        </li>
+                        <li class="tabs__item">
+                            <a href="#" class="tabs__link link">Oct - Dec</a>
+                        </li>
+                    </ul>
+                    <div class="columns">
+                        <div class="columns__item data-block">
+                            <h5 class="data-block__header">Community actions</h5>
+                            <ul class="data-block__list">
+                                <li class="data-block__list-item data-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">Users creating issues:</span>
+                                    <span class="data-item__value">113</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">Users commenting issues:</span>
+                                    <span class="data-item__value">181</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">Users creating PR:</span>
+                                    <span class="data-item__value">59</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_e"></span>
+                                    <span class="data-item__title">Contributors:</span>
+                                    <span class="data-item__value">39</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_c"></span>
+                                    <span class="data-item__title">Watchers:</span>
+                                    <span class="data-item__value">46</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_d"></span>
+                                    <span class="data-item__title">Forks:</span>
+                                    <span class="data-item__value">140</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_a"></span>
+                                    <span class="data-item__title">Users involved:</span>
+                                    <span class="data-item__value">2502</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="columns__item data-block">
+                            <h5 class="data-block__header">Agility actions</h5>
+                            <ul class="data-block__list">
+                                <li class="data-block__list-item data-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">Issues active:</span>
+                                    <span class="data-item__value">17.19%</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">Issues non owner:</span>
+                                    <span class="data-item__value">99.22%</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">Issues with contrib comments:</span>
+                                    <span class="data-item__value">83.59%</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_e"></span>
+                                    <span class="data-item__title">Issues all:</span>
+                                    <span class="data-item__value">128</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_c"></span>
+                                    <span class="data-item__title">Issues closed:</span>
+                                    <span class="data-item__value">82.81%</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_d"></span>
+                                    <span class="data-item__title">PR active:</span>
+                                    <span class="data-item__value">0.0%</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_a"></span>
+                                    <span class="data-item__title">PR non owner:</span>
+                                    <span class="data-item__value">100.0%</span>
+                                </li>
+                                <li class="data-block__list-item data-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">PR with contrib comments:</span>
+                                    <span class="data-item__value">78.57%</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">PR all:</span>
+                                    <span class="data-item__value">84</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">PR closed:</span>
+                                    <span class="data-item__value">100.0%</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_e"></span>
+                                    <span class="data-item__title">First PR date:</span>
+                                    <span class="data-item__value">Wed 7, Sep 2016</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_c"></span>
+                                    <span class="data-item__title">Last PR date:</span>
+                                    <span class="data-item__value">Fri 9, Sep 2016</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_d"></span>
+                                    <span class="data-item__title">First issue date:</span>
+                                    <span class="data-item__value">Wed 7, Sep 2016</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_a"></span>
+                                    <span class="data-item__title">Last issue date:</span>
+                                    <span class="data-item__value">Sat 10, Sep 2016</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_b"></span>
+                                    <span class="data-item__title">Last release date:</span>
+                                    <span class="data-item__value">Sat 10, Sep 2016</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_e"></span>
+                                    <span class="data-item__title">Releases:</span>
+                                    <span class="data-item__value">49</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_c"></span>
+                                    <span class="data-item__title">Commits since last release:</span>
+                                    <span class="data-item__value">9</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_d"></span>
+                                    <span class="data-item__title">Last year commits:</span>
+                                    <span class="data-item__value">52</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_a"></span>
+                                    <span class="data-item__title">Total downloads:</span>
+                                    <span class="data-item__value">2,186,416</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_d"></span>
+                                    <span class="data-item__title">Life period:</span>
+                                    <span class="data-item__value">5+ years</span>
+                                </li>
+                                <li class="data-block__list-item">
+                                    <span class="indicator indicator_rate_a"></span>
+                                    <span class="data-item__title">Last changed:</span>
+                                    <span class="data-item__value">Sat 10, Sep 2016</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

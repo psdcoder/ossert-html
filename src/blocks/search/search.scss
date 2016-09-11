@@ -8,6 +8,11 @@
     height: calc($layoutCommonPadding * 2);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
 
-    @mixin control-style $buttonPrimaryColor, $buttonPrimaryBg;
+    @mixin control-style-dark $themePrimary, #fff;
+  }
+
+  &__submit {
+    @mixin control-style-dark $themePrimary, #fff;
+    @mixin button-icon-style-dark $themePrimary;
   }
 }

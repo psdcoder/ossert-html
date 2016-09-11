@@ -1,0 +1,71 @@
+.indicator {
+  display: inline-block;
+  width: $indicatorCircleSize;
+  height: $indicatorCircleSize;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  line-height: calc($indicatorCircleSize - 2);
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+
+  &_type_small {
+    border-width: 2px;
+    font-size: 12px;
+    line-height: calc($indicatorCircleSize - 4);
+    cursor: default;
+  }
+
+  &_no-letter::before {
+    display: none;
+  }
+
+  /* Rates */
+  &_rate_a {
+    background-color: $indicatorRateA;
+    border-color: color($indicatorRateA lightness(-8%));
+
+    &::before {
+      content: 'A';
+    }
+  }
+
+  &_rate_b {
+    background-color: $indicatorRateB;
+    border-color: color($indicatorRateB lightness(-8%));
+
+    &::before {
+      content: 'B';
+    }
+  }
+
+  &_rate_c {
+    background-color: $indicatorRateC;
+    border-color: color($indicatorRateC lightness(-8%));
+
+    &::before {
+      content: 'C';
+    }
+  }
+
+  &_rate_d {
+    background-color: $indicatorRateD;
+    border-color: color($indicatorRateD lightness(-8%));
+
+    &::before {
+      content: 'D';
+    }
+  }
+
+  &_rate_e {
+    background-color: $indicatorRateE;
+    border-color: color($indicatorRateE lightness(-8%));
+
+    &::before {
+      content: 'E';
+    }
+  }
+}

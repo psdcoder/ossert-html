@@ -6,6 +6,10 @@
   padding: calc(($controlHeight - $iconSize - 2) / 2) calc(($controlHeight - $iconSize - 2) * 2);
   cursor: pointer;
 
+  &_style_raw {
+    background-color: transparent;
+  }
+
   &_style_primary {
     @mixin control-style $buttonPrimaryColor, $buttonPrimaryBg;
     @mixin button-icon-style $buttonPrimaryColor;

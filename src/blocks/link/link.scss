@@ -2,7 +2,7 @@
   display: inline-block;
   vertical-align: middle;
 
-  @mixin link-states $themePrimary;
+  @mixin link-states $linkColor;
 
   &_no-underline {
     text-decoration: none;
