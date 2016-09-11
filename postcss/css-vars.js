@@ -19,9 +19,9 @@ module.exports = {
     controlHeight: '40px',
     iconSize: '32px',
 
-    linkColor: '#CC342D',
+    linkColor: '#4087cc',
 
-    buttonPrimaryColor: '#cc342d',
+    buttonPrimaryColor: '#4087cc',
     buttonPrimaryBg: '#fff',
     buttonSecondaryColor: '#868686',
     buttonSecondaryBg: '#fff',
