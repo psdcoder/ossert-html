@@ -15,12 +15,8 @@
   }
 
   &__view-toogler-container {
-    position: absolute;
-    top: 0;
-    right: calc($layoutCommonPadding * 1.5);
-  }
-
-  &__tabs&__tabs {
-    margin-top: $layoutCommonPadding;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $layoutCommonPadding;
   }
 }

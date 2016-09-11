@@ -15,7 +15,7 @@
             <form action="#" class="controls-group header__search search">
                 <input type="text" class="search__input controls-group__item" placeholder="Type package name...">
                 <button class="controls-group__item button button_style_raw search__submit">
-                    <svg class="icon icon_type_search button__icon search__submit-icon">
+                    <svg class="icon button__icon search__submit-icon">
                         <use xlink:href="#icon_type_search"></use>
                     </svg>
                 </button>
@@ -30,10 +30,10 @@
                         <span class="gem__header-prefix">Analysis for project:</span> <a class="link link_no-underline" rel="nofollow" target="_blank" href="//rubygems.org/gems/gon">gon</a>
                     </h1>
                     <div class="gem__indicators">
-                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_b" data-balloon="Agility actions: whole life" data-balloon-pos="left">A(w)</span>
-                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_c" data-balloon="Agility actions: last year" data-balloon-pos="left">A(l)</span>
-                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_d" data-balloon="Community actions: whole life" data-balloon-pos="left">C(w)</span>
-                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_a" data-balloon="Community actions: whole life" data-balloon-pos="left">C(l)</span>
+                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_b" data-balloon="Agility actions: whole life" data-balloon-pos="up">A(w)</span>
+                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_c" data-balloon="Agility actions: last year" data-balloon-pos="up">A(l)</span>
+                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_d" data-balloon="Community actions: whole life" data-balloon-pos="up">C(w)</span>
+                        <span class="indicator indicator_type_small indicator_no-letter indicator_rate_a" data-balloon="Community actions: whole life" data-balloon-pos="up">C(l)</span>
                     </div>
                 </div>
                 <ul class="gem__info-row gem__info-row_info-columns">
@@ -58,15 +58,42 @@
                         <span class="gem__info-column-value">5 years ago</span>
                     </li>
                 </ul>
-                <p class="gem__info-row gem__description text">
-                    If you need to send some data to your js files and you don't want to do this with long way trough views and parsing - use this force!
-                </p>
+                <div class="gem__info-row gem__info-row_description">
+                    <p class="text">
+                        If you need to send some data to your js files and you don't want to do this with long way trough views and parsing - use this force!
+                    </p>
+                </div>
                 <div class="gem__info-row gem__info-row_buttons">
-                    <button class="gem__button-info button button_style_primary">Website</button>
-                    <button class="gem__button-info button button_style_primary">RDoc</button>
-                    <button class="gem__button-info button button_style_primary">Wiki</button>
-                    <button class="gem__button-info button button_style_primary">Source Code</button>
-                    <button class="gem__button-info button button_style_primary">Bug Tracker</button>
+                    <a class="gem__button-info button button_style_primary" href="#" rel="nofollow" target="_blank">
+                        <svg class="icon button__icon  button__icon_prefix">
+                            <use xlink:href="#icon_type_earth"></use>
+                        </svg>
+                        Website
+                    </a>
+                    <a class="gem__button-info button button_style_primary" href="#" rel="nofollow" target="_blank">
+                        <svg class="icon button__icon  button__icon_prefix">
+                            <use xlink:href="#icon_type_docs"></use>
+                        </svg>
+                        RDoc
+                    </a>
+                    <a class="gem__button-info button button_style_primary" href="#" rel="nofollow" target="_blank">
+                        <svg class="icon button__icon  button__icon_prefix">
+                            <use xlink:href="#icon_type_wiki"></use>
+                        </svg>
+                        Wiki
+                    </a>
+                    <a class="gem__button-info button button_style_primary" href="#" rel="nofollow" target="_blank">
+                        <svg class="icon button__icon  button__icon_prefix">
+                            <use xlink:href="#icon_type_code"></use>
+                        </svg>
+                        Source Code
+                    </a>
+                    <a class="gem__button-info button button_style_primary" href="#" rel="nofollow" target="_blank">
+                        <svg class="icon button__icon  button__icon_prefix">
+                            <use xlink:href="#icon_type_bugs"></use>
+                        </svg>
+                        Bug Tracker
+                    </a>
                 </div>
             </div>
 
@@ -97,12 +124,12 @@
                     <div class="gem-statistic__view-toogler-container">
                         <div class="controls-group toggler">
                             <button class="controls-group__item toggler__item toggler__item_active button button_style_secondary">
-                                <svg class="icon icon_type_list button__icon toggler__item-icon">
+                                <svg class="icon button__icon toggler__item-icon">
                                     <use xlink:href="#icon_type_list"></use>
                                 </svg>
                             </button>
                             <button class="controls-group__item toggler__item button button_style_secondary">
-                                <svg class="icon icon_type_chart button__icon toggler__item-icon">
+                                <svg class="icon button__icon toggler__item-icon">
                                     <use xlink:href="#icon_type_chart"></use>
                                 </svg>
                             </button>

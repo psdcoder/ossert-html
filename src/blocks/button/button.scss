@@ -1,9 +1,10 @@
 .button {
   border: 1px solid transparent;
   height: $controlHeight;
-  line-height: $iconSize;
-  border-radius: $layoutBorderRadius;
   padding: calc(($controlHeight - $iconSize - 2) / 2) calc(($controlHeight - $iconSize - 2) * 2);
+  border-radius: $layoutBorderRadius;
+  line-height: $iconSize;
+  text-decoration: none;
   cursor: pointer;
 
   &_style_raw {
@@ -20,13 +21,18 @@
     @mixin button-icon-style $buttonSecondaryColor, $buttonSecondaryBg;
   }
 
-  &__icon {
-    &_prefix {
-      margin-right: calc($controlHeight - $iconSize - 2);
-    }
+  &__icon&__icon {
+    position: relative;
+    top: -2px;
+    width: 16px;
+    height: 16px;
+  }
 
-    &_suffix {
-      margin-left: calc($controlHeight - $iconSize - 2);
-    }
+  &__icon_prefix {
+    margin-right: calc($controlHeight - $iconSize - 2);
+  }
+
+  &__icon_suffix {
+    margin-left: calc($controlHeight - $iconSize - 2);
   }
 }

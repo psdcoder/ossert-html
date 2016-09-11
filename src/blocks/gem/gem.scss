@@ -37,6 +37,11 @@
     align-items: center;
   }
 
+  &__info-row_description&__info-row_description {
+    margin: calc($layoutCommonPadding * 1.5) 0;
+    color: $textColorSecondary;
+  }
+
   &__button-info + &__button-info {
     margin-left: 15px;
   }
@@ -53,9 +58,5 @@
 
   &__indicators {
     margin-left: auto;
-  }
-
-  &__description {
-    color: $textColorSecondary;
   }
 }
