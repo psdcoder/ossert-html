@@ -7,9 +7,10 @@ const bs = require('browser-sync').create();
 
 const EXTS_TO_FREEZE = 'jpg|jpeg|png|svg|css';
 const SRC_DIR = path.join(__dirname, 'src');
-const STYLES_DIR = path.join(SRC_DIR, 'styles');
 const BUILD_DIR = 'build';
+const STYLES_DIR = path.join(SRC_DIR, 'styles');
 const BLOCKS_DIR = path.join(STYLES_DIR, 'blocks');
+const POSTCSS_DIR = path.join(STYLES_DIR, 'postcss');
 const PATHS = {
     VENDORS_STYLES: path.join(STYLES_DIR, 'vendors', '*.*'),
     COMMON_STYLES: path.join(STYLES_DIR, 'common', '**', '*.pcss'),
@@ -17,7 +18,7 @@ const PATHS = {
     BLOCKS_STYLES: path.join(STYLES_DIR, '**', '*.pcss'),
     BLOCKS_ASSETS: path.join(STYLES_DIR, '**', '*.!(pcss)'),
     ROOT_HTML: path.join(SRC_DIR, '*.html'),
-    POSTCSS: path.join(__dirname, 'postcss', '*.js'),
+    POSTCSS: path.join(POSTCSS_DIR, '*.js'),
     SVG_SPRITE: path.join(BLOCKS_DIR, 'icon', 'icons-sprite.svg')
 };
 let svgSprite = loadSvgSprite(PATHS.SVG_SPRITE);
@@ -33,11 +34,11 @@ gulp.task('blocks:styles', function () {
         .pipe($.postcss([
             require('postcss-mixins'),
             require('postcss-simple-vars')({
-                variables: require('./postcss/css-vars')
+                variables: require(path.join(POSTCSS_DIR, 'css-vars'))
             }),
             require('postcss-nested'),
             require('postcss-custom-media')({
-                extensions: require('./postcss/css-media')
+                extensions: require(path.join(POSTCSS_DIR, 'css-media'))
             }),
             require('postcss-media-minmax'),
             require('postcss-utilities'),
