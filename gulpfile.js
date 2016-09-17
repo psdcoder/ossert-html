@@ -7,14 +7,15 @@ const bs = require('browser-sync').create();
 
 const EXTS_TO_FREEZE = 'jpg|jpeg|png|svg|css';
 const SRC_DIR = path.join(__dirname, 'src');
+const STYLES_DIR = path.join(SRC_DIR, 'styles');
 const BUILD_DIR = 'build';
-const BLOCKS_DIR = path.join(SRC_DIR, 'blocks');
+const BLOCKS_DIR = path.join(STYLES_DIR, 'blocks');
 const PATHS = {
-    VENDORS_STYLES: path.join(SRC_DIR, 'vendors', '*.*'),
-    COMMON_STYLES: path.join(SRC_DIR, 'common', '**', '*.scss'),
-    MIXINS_STYLES: path.join(SRC_DIR, 'mixins', '**', '*.scss'),
-    BLOCKS_STYLES: path.join(BLOCKS_DIR, '**', '*.scss'),
-    BLOCKS_ASSETS: path.join(BLOCKS_DIR, '**', '*.!(scss)'),
+    VENDORS_STYLES: path.join(STYLES_DIR, 'vendors', '*.*'),
+    COMMON_STYLES: path.join(STYLES_DIR, 'common', '**', '*.pcss'),
+    MIXINS_STYLES: path.join(STYLES_DIR, 'mixins', '**', '*.pcss'),
+    BLOCKS_STYLES: path.join(STYLES_DIR, '**', '*.pcss'),
+    BLOCKS_ASSETS: path.join(STYLES_DIR, '**', '*.!(pcss)'),
     ROOT_HTML: path.join(SRC_DIR, '*.html'),
     POSTCSS: path.join(__dirname, 'postcss', '*.js'),
     SVG_SPRITE: path.join(BLOCKS_DIR, 'icon', 'icons-sprite.svg')

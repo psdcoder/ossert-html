@@ -1,11 +1,14 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-[data-balloon]:after {
+[data-balloon]::after {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 18px;
