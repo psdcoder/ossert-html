@@ -16,7 +16,7 @@ const PATHS = {
     COMMON_STYLES: path.join(STYLES_DIR, 'common', '**', '*.pcss'),
     MIXINS_STYLES: path.join(STYLES_DIR, 'mixins', '**', '*.pcss'),
     BLOCKS_STYLES: path.join(STYLES_DIR, '**', '*.pcss'),
-    BLOCKS_ASSETS: path.join(STYLES_DIR, '**', '*.!(pcss)'),
+    BLOCKS_ASSETS: path.join(BLOCKS_DIR, '**', '*.*(svg|jpeg|jpeg|png|gif)'),
     ROOT_HTML: path.join(SRC_DIR, '*.html'),
     POSTCSS: path.join(POSTCSS_DIR, '*.js'),
     SVG_SPRITE: path.join(BLOCKS_DIR, 'icon', 'icons-sprite.svg')
