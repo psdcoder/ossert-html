@@ -1,23 +1,20 @@
 .years {
-  margin: 0;
+  margin: calc($layoutCommonPadding * 2) 0 0;
   padding: 0;
   list-style: none;
+  white-space: nowrap;
+  overflow-x: scroll;
+  border-bottom: 2px solid $layoutBorder;
+
+  &__item {
+    display: inline-block;
+  }
 
   &__item_active > .years__link {
     text-decoration: none;
     color: $textColorSecondary;
     cursor: default;
     pointer-events: none;
-
-    &::after {
-      content: '\25B6';
-      position: absolute;
-      top: 1px;
-      display: inline-block;
-      margin-left: 5px;
-      font-size: 14px;
-      line-height: calc(18px * 1.5);
-    }
   }
 
   &__link {

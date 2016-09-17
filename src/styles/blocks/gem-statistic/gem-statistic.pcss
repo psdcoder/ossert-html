@@ -1,22 +1,67 @@
 .gem-statistic {
-  display: flex;
-
-  &__sidebar&__sidebar {
-    width: 120px;
-    text-align: center;
-    padding-right: calc($layoutCommonPadding * 1.5);
-  }
-
-  &__content {
-    position: relative;
-    flex-grow: 1;
-    border-left: 1px dashed $layoutBorder;
-    padding: 0 calc($layoutCommonPadding * 1.5);
-  }
-
-  &__view-toogler-container {
+  &__columns {
     display: flex;
-    justify-content: center;
-    margin-bottom: $layoutCommonPadding;
+  }
+
+  &__column {
+    flex: 1;
+  }
+
+  &__column + &__column {
+    margin-left: calc($layoutCommonPadding * 1.5);
+  }
+
+  &__main-header {
+    margin: calc($layoutCommonPadding * 1.5) 0 $layoutCommonPadding;
+    font-family: $fontFamily;
+    font-size: 24px;
+    text-align: center;
+    color: $textColorPrimary;
+  }
+
+  &__column-header {
+    margin: 0 0 $layoutCommonPadding;
+    font-family: $fontFamily;
+    font-size: 20px;
+    text-align: center;
+    color: $textColorSecondary;
+  }
+
+  &__period-header {
+    margin: calc($layoutCommonPadding * 2) 0 $layoutCommonPadding;
+    padding-bottom: calc($layoutCommonPadding / 2);
+    border-bottom: 1px dashed $layoutBorder;
+    font-family: $fontFamily;
+    font-size: 18px;
+    color: $textColorMuted;
+    text-align: center;
+  }
+
+  &__period-header_no-top-margin {
+    margin-top: 0;
+  }
+
+  &__group {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__group + &__group {
+    margin-top: calc($layoutCommonPadding * 1.5);
+  }
+
+  &__group-header {
+    margin: 0;
+    padding-left: calc($layoutCommonPadding / 2);
+    font-family: $fontFamily;
+    font-size: 18px;
+    text-align: left;
+    font-weight: normal;
+    color: $textColorMuted;
+  }
+
+  &__group-item + &__group-item {
+    margin-top: calc($layoutCommonPadding / 2);
   }
 }

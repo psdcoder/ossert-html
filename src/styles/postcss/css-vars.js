@@ -28,7 +28,7 @@ module.exports = {
     indicatorCircleSize: '40px',
     indicatorRateA: '#17be5e',
     indicatorRateB: '#81be17',
-    indicatorRateC: '#f1c40f',
+    indicatorRateC: '#ecc217',
     indicatorRateD: '#de6c20',
     indicatorRateE: '#de2020'
 };
