@@ -8,6 +8,7 @@ module.exports = {
     layoutSecondaryBg: '#fff',
     layoutBorder: '#bdc3c7',
     layoutBorderRadius: '2px',
+    separatorBorder: '#ced2d4',
 
     themePrimary: '#2c3e50',
 
@@ -26,9 +27,9 @@ module.exports = {
     buttonSecondaryBg: '#fff',
 
     indicatorCircleSize: '40px',
-    indicatorRateA: '#17be5e',
-    indicatorRateB: '#81be17',
+    indicatorRateA: '#0ac53d',
+    indicatorRateB: '#a9bf38',
     indicatorRateC: '#ecc217',
-    indicatorRateD: '#de6c20',
+    indicatorRateD: '#e09432',
     indicatorRateE: '#de2020'
 };

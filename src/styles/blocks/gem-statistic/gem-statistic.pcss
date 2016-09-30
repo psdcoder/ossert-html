@@ -5,14 +5,24 @@
 
   &__column {
     flex: 1;
+    padding-left: $layoutCommonPadding;
+    padding-right: $layoutCommonPadding;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   &__column + &__column {
-    margin-left: calc($layoutCommonPadding * 1.5);
+    border-left: 1px dashed $separatorBorder;
   }
 
   &__main-header {
-    margin: calc($layoutCommonPadding * 1.5) 0 $layoutCommonPadding;
+    margin: calc($layoutCommonPadding * 1.5) 0;
     font-family: $fontFamily;
     font-size: 24px;
     text-align: center;
@@ -52,16 +62,28 @@
   }
 
   &__group-header {
-    margin: 0;
-    padding-left: calc($layoutCommonPadding / 2);
+    margin: $layoutCommonPadding 0 $layoutCommonPadding $layoutCommonPadding;
     font-family: $fontFamily;
     font-size: 18px;
     text-align: left;
     font-weight: normal;
-    color: $textColorMuted;
+    color: $textColorPrimary;
+  }
+
+  &__group-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 16px;
   }
 
   &__group-item + &__group-item {
-    margin-top: calc($layoutCommonPadding / 2);
+    margin-top: calc($layoutCommonPadding);
+  }
+
+  &__group-item-dots-spacer {
+    margin: 0 5px;
+    border-bottom: 1px dotted color($layoutBorder lightness(+12%));
+    flex-grow: 1;
   }
 }
