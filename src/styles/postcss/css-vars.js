@@ -14,14 +14,15 @@ module.exports = {
 
     textColorPrimary: '#2c3e50',
     textColorSecondary: '#34495e',
+    textColorSubheaders: '#8597ad',
     textColorMuted: '#727f8e',
 
     controlHeight: '40px',
     iconSize: '32px',
 
-    linkColor: '#3498db',
+    linkColor: '#5788b9',
 
-    buttonPrimaryColor: '#3498db',
+    buttonPrimaryColor: '#5788b9',
     buttonPrimaryBg: '#fff',
     buttonSecondaryColor: '#727f8e',
     buttonSecondaryBg: '#fff',

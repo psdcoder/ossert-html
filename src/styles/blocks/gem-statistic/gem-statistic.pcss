@@ -62,12 +62,16 @@
   }
 
   &__group-header {
-    margin: $layoutCommonPadding 0 $layoutCommonPadding $layoutCommonPadding;
+    margin: $layoutCommonPadding 0;
     font-family: $fontFamily;
     font-size: 18px;
     text-align: left;
     font-weight: normal;
-    color: $textColorPrimary;
+    color: $textColorSubheaders;
+  }
+
+  &__group + &__group-header {
+    margin-top: calc($layoutCommonPadding * 2);
   }
 
   &__group-item {
@@ -79,6 +83,19 @@
 
   &__group-item + &__group-item {
     margin-top: calc($layoutCommonPadding);
+  }
+
+  &__group-item-help {
+    margin-left: 5px;
+    margin-top: -1px;
+    cursor: pointer;
+    color: $linkColor;
+
+    &_before {
+      margin-left: 0;
+      margin-right: 5px;
+      margin-top: -2px;
+    }
   }
 
   &__group-item-dots-spacer {

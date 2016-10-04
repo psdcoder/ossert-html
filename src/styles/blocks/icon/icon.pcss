@@ -1,21 +1,13 @@
 .icon {
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 1em;
+  height: 1em;
   vertical-align: middle;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 
-  &_type_chart {
-    background-image: url('./chart.svg');
-  }
-
-  &_type_list {
-    background-image: url('./list.svg');
-  }
-
-  &_type_search {
-    background-image: url('./search.svg');
+  &_inline {
+    display: inline;
   }
 }
