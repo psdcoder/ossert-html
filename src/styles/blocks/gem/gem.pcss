@@ -11,6 +11,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding: calc($layoutCommonPadding / 2);
+    background-color: #4e6473;
+
+    @media (--phone) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   &__info-row_description&__info-row_description {
@@ -18,8 +26,27 @@
     color: $textColorSecondary;
   }
 
-  &__button-info + &__button-info {
-    margin-left: 15px;
+  &__button-info {
+    padding: calc($layoutCommonPadding / 2);
+    margin: 0 calc($layoutCommonPadding / 2);
+    color: #fff;
+    text-decoration: none;
+
+    @media (--phone) {
+      margin: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: #e6f5ff;
+    }
+  }
+
+  &__button-info-icon {
+    position: relative;
+    top: -2px;
+    width: 16px;
+    height: 16px;
   }
 
   &__header {

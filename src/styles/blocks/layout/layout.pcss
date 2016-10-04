@@ -14,7 +14,17 @@
     flex-grow: 1;
   }
 
-  &__content-section + &__content-section {
-    margin-top: $layoutCommonPadding;
+  &__content-section {
+    margin-top: calc($layoutCommonPadding * 2);
+  }
+
+  &__content-inner_full-width {
+    margin-left: -calc($layoutCommonPadding * 1.5);
+    margin-right: -calc($layoutCommonPadding * 1.5);
+
+    @media (--tablet) {
+      margin-left: -$layoutCommonPadding;
+      margin-right: -$layoutCommonPadding;
+    }
   }
 }

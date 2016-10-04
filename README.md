@@ -10,7 +10,3 @@ gulp.task('prod', gulp.series('default', 'revision:hash', 'revision:replace'));
 gulp.task('prod:serve', gulp.series('default', 'revision:hash', 'revision:replace', 'serve'));
 gulp.task('dev', gulp.series('default', gulp.parallel('watch', 'serve:watch')));
 gulp.task('dev:serve', gulp.series('default', 'serve'));
-
-## TODO
-
-* horizontal scrollbar for years? http://manos.malihu.gr/jquery-custom-content-scroller/
