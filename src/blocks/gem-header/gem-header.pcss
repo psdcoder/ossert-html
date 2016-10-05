@@ -1,0 +1,34 @@
+.gem-header {
+  margin: 0;
+
+  &__inner {
+    position: relative;
+    z-index: 100;
+    margin: 0;
+  }
+
+  &__heading {
+    max-width: calc($layoutMaxWidth - 2px);
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 50px;
+  }
+
+  &__prefix {
+    vertical-align: middle;
+  }
+
+  &_sticky &__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid color($layoutBorder lightness(+10%));
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  &_sticky &__heading {
+    padding: 0 calc($layoutCommonPadding * 1.5);
+  }
+}
