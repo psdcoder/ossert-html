@@ -8,10 +8,10 @@
   }
 
   &__heading {
-    max-width: calc($layoutMaxWidth - 2px);
     margin: 0 auto;
-    font-size: 24px;
-    line-height: 50px;
+    font-size: 66px;
+    font-weight: 600;
+    line-height: 1;
   }
 
   &__prefix {
@@ -24,11 +24,11 @@
     left: 0;
     right: 0;
     background-color: #fff;
-    border-bottom: 1px solid color($layoutBorder lightness(+10%));
+    border-bottom: 1px solid $layoutSecondaryBg;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
   }
 
   &_sticky &__heading {
-    padding: 0 calc($layoutCommonPadding * 1.5);
+    padding: 0 calc($layoutFactor * 2);
   }
 }

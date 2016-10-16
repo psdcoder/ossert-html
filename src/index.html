@@ -11,648 +11,481 @@
     <!-- svgSprite -->
     <header class="header">
         <div class="width-container header__content">
-            <a href="/" class="logo header__logo">Ossert</a>
-            <form action="#" class="controls-group header__search search">
-                <input type="text" class="search__input controls-group__item" placeholder="Type package name...">
-                <button class="controls-group__item button button_style_raw search__submit">
-                    <svg class="icon button__icon search__submit-icon">
+            <a href="/" class="logo header__logo">Ossert.</a>
+            <span class="header__description">Open-Source Maturity & Maintenance Certification</span>
+            <form action="#" class="header__search search">
+                <input type="text" class="search__input" placeholder="Type package name...">
+                <button class="search__submit">
+                    <svg class="icon search__submit-icon">
                         <use xlink:href="#icon_type_search"></use>
                     </svg>
                 </button>
             </form>
         </div>
     </header>
-    <main class="layout__content width-container panel">
-        <section class="gem">
-            <div class="gem__info-row gem-header" id="sticky-project-header">
-                <div class="gem-header__inner">
-                    <h1 class="gem-header__heading">
-                        <span class="gem-header__prefix">Analysis for project:</span> <a class="link link_no-underline" rel="nofollow" target="_blank" href="//rubygems.org/gems/gon">gon</a>
-                    </h1>
+    <main class="layout__content width-container">
+        <header class="layout__content-row">
+            <div class="layout__content-section">
+                <div class="gem">
+                    <div class="gem-header" id="sticky-project-header">
+                        <div class="gem-header__inner">
+                            <h1 class="gem-header__heading">gon</h1>
+                        </div>
+                    </div>
+                    <p class="gem__description">
+                        If you need to send some data to your js files and you don't want to do this with long way trough views and parsing - use this force!
+                    </p>
+                    <div class="gem__links">
+                        <a class="gem__link link" href="#" rel="nofollow" target="_blank">Website</a>
+                        <a class="gem__link link" href="#" rel="nofollow" target="_blank">RDoc</a>
+                        <a class="gem__link link" href="#" rel="nofollow" target="_blank">Wiki</a>
+                        <a class="gem__link link" href="#" rel="nofollow" target="_blank">Source Code</a>
+                        <a class="gem__link link" href="#" rel="nofollow" target="_blank">Bug Tracker</a>
+                    </div>
                 </div>
             </div>
-            <div class="gem__info-row gem__info-row-description">
-                <p class="text">
-                    If you need to send some data to your js files and you don't want to do this with long way trough views and parsing - use this force!
-                </p>
+            <aside class="layout__sidebar-section">
+                <ul class="gem-main-stats">
+                    <li class="gem-main-stats__item">
+                        <a href="#popularity" class="gem-main-stats__item-link">
+                            <svg class="icon icon_type_mark-a gem-main-stats__item-mark">
+                                <use xlink:href="#icon_type_mark-a"></use>
+                            </svg>
+                            Popularity
+                        </a>
+                    </li>
+                    <li class="gem-main-stats__item">
+                        <a href="#maintenance" class="gem-main-stats__item-link">
+                            <svg class="icon icon_type_mark-b gem-main-stats__item-mark">
+                                <use xlink:href="#icon_type_mark-b"></use>
+                            </svg>
+                            Maintenance
+                        </a>
+                    </li>
+                    <li class="gem-main-stats__item">
+                        <a href="#maturity" class="gem-main-stats__item-link">
+                            <svg class="icon icon_type_mark-d gem-main-stats__item-mark">
+                                <use xlink:href="#icon_type_mark-d"></use>
+                            </svg>
+                            Maturity
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </header>
+        <div class="layout__content-row">
+            <div class="layout__content-section">
+                <section class="gem-stats" id="popularity">
+                    <header class="gem-stats__header-container">
+                        <h3 class="gem-stats__header">Popularity</h3>
+                        <div class="gem-stats__chart"></div>
+                        <svg class="icon icon_type_mark-a gem-stats__mark">
+                            <use xlink:href="#icon_type_mark-a"></use>
+                        </svg>
+                    </header>
+                    <p class="gem-stats__description">
+                        Popularity is metric calculated from user activity for the last year and total from all time. This way we can see if projects popularity rises or is already in decline.
+                    </p>
+                    <table class="gems-stats-table">
+                        <thead class="gems-stats-table__header">
+                            <tr class="gems-stats-table__header-row">
+                                <th class="gems-stats-table__header-cell">Metric</th>
+                                <th class="gems-stats-table__header-cell gems-stats-table__header-cell_right">This year</th>
+                                <th class="gems-stats-table__header-cell gems-stats-table__header-cell_right">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="gems-stats-table__body">
+                            <tr class="gems-stats-table__row">
+                                <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                    Users Creating Issues
+                                    <svg class="icon gems-stats-table__info-icon">
+                                        <use xlink:href="#icon_type_info"></use>
+                                    </svg>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_a">125 A</span>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_a">344 A</span>
+                                </td>
+                            </tr>
+                            <tr class="gems-stats-table__row">
+                                <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                    Users Commenting Issues
+                                    <svg class="icon gems-stats-table__info-icon">
+                                        <use xlink:href="#icon_type_info"></use>
+                                    </svg>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_b ">300 B</span>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_a">1 300 A</span>
+                                </td>
+                            </tr>
+                            <tr class="gems-stats-table__row">
+                                <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                    Users Creating Pull Requests
+                                    <svg class="icon gems-stats-table__info-icon">
+                                        <use xlink:href="#icon_type_info"></use>
+                                    </svg>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_b">30 B</span>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_c">320 C</span>
+                                </td>
+                            </tr>
+                            <tr class="gems-stats-table__row">
+                                <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                    Users Commenting Pull Requests
+                                    <svg class="icon gems-stats-table__info-icon">
+                                        <use xlink:href="#icon_type_info"></use>
+                                    </svg>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_c">155 C</span>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_d">450 D</span>
+                                </td>
+                            </tr>
+                            <tr class="gems-stats-table__row">
+                                <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                    Stargazers
+                                    <svg class="icon gems-stats-table__info-icon">
+                                        <use xlink:href="#icon_type_info"></use>
+                                    </svg>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_a">3 000 A</span>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_a">15 000 A</span>
+                                </td>
+                            </tr>
+                            <tr class="gems-stats-table__row">
+                                <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                    Forks
+                                    <svg class="icon gems-stats-table__info-icon">
+                                        <use xlink:href="#icon_type_info"></use>
+                                    </svg>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_b">49 B</span>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_b">300 B</span>
+                                </td>
+                            </tr>
+                            <tr class="gems-stats-table__row">
+                                <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                    Users Involved
+                                    <svg class="icon gems-stats-table__info-icon">
+                                        <use xlink:href="#icon_type_info"></use>
+                                    </svg>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_e">189 E</span>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_d">450 D</span>
+                                </td>
+                            </tr>
+                            <tr class="gems-stats-table__row">
+                                <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                    Users Involved Without Stargazers
+                                    <svg class="icon gems-stats-table__info-icon">
+                                        <use xlink:href="#icon_type_info"></use>
+                                    </svg>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_c">1 500 C</span>
+                                </td>
+                                <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                    <span class="mark-text mark-text_a">5000 A</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="gem-stats" id="maintenance">
+                    <header class="gem-stats__header-container">
+                        <h3 class="gem-stats__header">Maintenance</h3>
+                        <div class="gem-stats__chart"></div>
+                        <svg class="icon icon_type_mark-b gem-stats__mark">
+                            <use xlink:href="#icon_type_mark-b"></use>
+                        </svg>
+                    </header>
+                    <p class="gem-stats__description">
+                        Maintenance is metric calculated from project activity for the last year and total from all time. This way we can see if project's developments is dynamic and core team is responsice or project is unstable and non-trusted.
+                    </p>
+                    <table class="gems-stats-table">
+                        <thead class="gems-stats-table__header">
+                        <tr class="gems-stats-table__header-row">
+                            <th class="gems-stats-table__header-cell">Metric</th>
+                            <th class="gems-stats-table__header-cell gems-stats-table__header-cell_right">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody class="gems-stats-table__body">
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Users Creating Issues
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">344 A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Users Commenting Issues
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">1 300 A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Users Creating Pull Requests
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_c">320 C</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Users Commenting Pull Requests
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_d">450 D</span>
+                             </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Stargazers
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">15 000 A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Forks
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_b">300 B</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Users Involved
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_d">450 D</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Users Involved Without Stargazers
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">5000 A</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="gem-stats" id="maturity">
+                    <header class="gem-stats__header-container">
+                        <h3 class="gem-stats__header">Maturity</h3>
+                        <div class="gem-stats__chart"></div>
+                        <svg class="icon icon_type_mark-a gem-stats__mark">
+                            <use xlink:href="#icon_type_mark-a"></use>
+                        </svg>
+                    </header>
+                    <p class="gem-stats__description">
+                        Maturity is metric calculated from both project and users activity for the last year and total from all time. This way we can see if project reached high growth level or just on its seedling stage.
+                    </p>
+                    <table class="gems-stats-table">
+                        <thead class="gems-stats-table__header">
+                        <tr class="gems-stats-table__header-row">
+                            <th class="gems-stats-table__header-cell">Metric</th>
+                            <th class="gems-stats-table__header-cell gems-stats-table__header-cell_right">This year</th>
+                            <th class="gems-stats-table__header-cell gems-stats-table__header-cell_right">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody class="gems-stats-table__body">
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Issues
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">344 A</span>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">344 A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Pull Requests
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_b ">500 B</span>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">1 300 A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Releases
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_c">10 C</span>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_c">32 C</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Commits
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">3 000 A</span>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">12 000 A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Users Creating Issues
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">344 A</span>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">344 A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Users Commenting Issues
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">1 300 A</span>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_b">2 000 B</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Total Downloads
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">30 000 000 A</span>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">150 000 000 A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Contributors
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_a">2 000 A</span>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_b">2 100 B</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Life Period
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right"></td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_b">2 years, 5 month A</span>
+                            </td>
+                        </tr>
+                        <tr class="gems-stats-table__row">
+                            <td class="gems-stats-table__cell gems-stats-table__cell_title">
+                                Last Changed
+                                <svg class="icon gems-stats-table__info-icon">
+                                    <use xlink:href="#icon_type_info"></use>
+                                </svg>
+                            </td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right"></td>
+                            <td class="gems-stats-table__cell gems-stats-table__cell_right">
+                                <span class="mark-text mark-text_d">20 september 2016 D</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
             </div>
-            <div class="gem__info-row gem__info-row-buttons layout__content-inner_full-width">
-                <a class="gem__button-info" href="#" rel="nofollow" target="_blank">
-                    <svg class="icon gem__button-info-icon">
-                        <use xlink:href="#icon_type_earth"></use>
-                    </svg>
-                    Website
-                </a>
-                <a class="gem__button-info" href="#" rel="nofollow" target="_blank">
-                    <svg class="icon gem__button-info-icon">
-                        <use xlink:href="#icon_type_docs"></use>
-                    </svg>
-                    RDoc
-                </a>
-                <a class="gem__button-info" href="#" rel="nofollow" target="_blank">
-                    <svg class="icon gem__button-info-icon">
-                        <use xlink:href="#icon_type_wiki"></use>
-                    </svg>
-                    Wiki
-                </a>
-                <a class="gem__button-info" href="#" rel="nofollow" target="_blank">
-                    <svg class="icon gem__button-info-icon">
-                        <use xlink:href="#icon_type_code"></use>
-                    </svg>
-                    Source Code
-                </a>
-                <a class="gem__button-info" href="#" rel="nofollow" target="_blank">
-                    <svg class="icon gem__button-info-icon">
-                        <use xlink:href="#icon_type_bugs"></use>
-                    </svg>
-                    Bug Tracker
-                </a>
-            </div>
-        </section>
-        <section class="layout__content-section gem-statistic">
-            <div class="gem-statistic__columns">
-                <div class="gem-statistic__column">
-                    <h4 class="gem-statistic__column-header">Popularity</h4>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            <a href="#last-year-data" class="link">Last year trends</a>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">A</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            <a href="#total-data" class="link">Total</a>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">B</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gem-statistic__column">
-                    <h4 class="gem-statistic__column-header">Maintenance Quality</h4>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            <a href="#last-year-data" class="link">Last year trends</a>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_e">E</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            <a href="#total-data" class="link">Total</a>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">B</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <hr class="separator">
-        <section class="gem-statistic">
-            <h2 class="gem-statistic__main-header" id="last-year-data">Last Year Data</h2>
-            <div class="gem-statistic__columns">
-                <div class="gem-statistic__column">
-                    <h4 class="gem-statistic__column-header">Popularity</h4>
-                    <h5 class="gem-statistic__group-header">Users</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Creating issues
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">1512</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Commenting issues
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_d">9</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Creating Pulls
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">1456</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Commenting Pulls
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_d">596</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Stargazers
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">6908</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Forks
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">3392</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Users Involved
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">12114</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Users Involved Without Stargazers
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_c">5206</span>
-                        </li>
-                    </ul>
-                    <h5 class="gem-statistic__group-header">Other</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Download divergence
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">19%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Total downloads
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_d">321,924,409</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Delta downloads
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_e">24,533,811</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gem-statistic__column">
-                    <h4 class="gem-statistic__column-header">Maintenance Quality</h4>
-                    <h5 class="gem-statistic__group-header">Issues</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Open Issues from Previous Period
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_d">57%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Issues Finished
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_d">44%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Issues All
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">3866</span>
-                        </li>
-                    </ul>
-                    <h5 class="gem-statistic__group-header">Pulls</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Pulls Finished
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_c">57%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Pulls All
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">1145</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Open Pulls from Previous Period
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_e">622</span>
-                        </li>
-                    </ul>
-                    <h5 class="gem-statistic__group-header">Other</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Releases
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">37</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Commits
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">3631</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <hr class="separator">
-        <section class="gem-statistic">
-            <h2 class="gem-statistic__main-header" id="total-data">Total Data</h2>
-            <div class="gem-statistic__columns">
-                <div class="gem-statistic__column">
-                    <h4 class="gem-statistic__column-header">Popularity</h4>
-                    <h5 class="gem-statistic__group-header">Users</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Creating issues
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">5060</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Commenting issues
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">2979</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Creating Pulls
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">3922</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Commenting Pulls
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_d">2650</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Watchers
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">2278</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Stargazers
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">32695</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Forks
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">13003</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Users Involved
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">49134</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Users Involved Without Stargazers
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">16439</span>
-                        </li>
-                    </ul>
-                    <h5 class="gem-statistic__group-header">Other</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Total downloads
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">74,924,409</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gem-statistic__column">
-                    <h4 class="gem-statistic__column-header">Maintenance Quality</h4>
-                    <h5 class="gem-statistic__group-header">Issues</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Non owner
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">100.0%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            With contrib comments
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_d">26.91%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            All
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">9167</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Finished
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">94.55%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Processed in average
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_c">~1 month</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            First date
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">3 august, 2010</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Last date
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">10 december, 2013</span>
-                        </li>
-                    </ul>
-                    <h5 class="gem-statistic__group-header">Pulls</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Non owner
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">100.0%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            With contrib comments
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_e">0.0%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            All
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">17234</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Finished
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">96.27%</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Processed in average
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_c">~26 days</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            First date
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">8 august, 2009</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Last date
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">7 september, 2013</span>
-                        </li>
-                    </ul>
-                    <h5 class="gem-statistic__group-header">Other</h5>
-                    <ul class="gem-statistic__group">
-                        <li class="gem-statistic__group-item">
-                            Releases
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">250</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Commits since last release
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">19200</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Last year commits
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_e">3631</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Life period
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_a">7+ years</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Last changed
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_b">13 december, 2013</span>
-                        </li>
-                        <li class="gem-statistic__group-item">
-                            Stale branches
-                            <span class="gem-statistic__group-item-help" data-balloon="Some descriptions of item" data-balloon-pos="up">
-                            <svg class="icon icon_inline">
-                                <use xlink:href="#icon_type_help"></use>
-                            </svg>
-                        </span>
-                            <span class="gem-statistic__group-item-dots-spacer"></span>
-                            <span class="rate rate_e">15</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
     <footer class="footer">
-        <div class="width-container footer__content">
-            <span class="footer__content-item">&copy; 2016 <a href="http://evilmartians.com" class="footer__link">Evil Martians</a></span>
-            <span class="footer__content-item">Made with <a href="https://www.ruby-lang.org" class="footer__link" rel="nofollow">Ruby</a>, <a href="http://www.sinatrarb.com/" class="footer__link" rel="nofollow">Sinatra</a>, <a href="http://rom-rb.org/" class="footer__link" rel="nofollow">ROM</a> by Sergey Dolganov</span>
-        </div>
+        &copy; Copyright 2001-2016 Sergey Dolganov
     </footer>
     <script src="main.js"></script>
 </body>

@@ -1,0 +1,60 @@
+.gems-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__header {
+    border-bottom: 1px solid $layoutBorderColor;
+  }
+
+  &__header-cell {
+    padding: 12px $layoutFactor;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    color: $textColorPrimary;
+
+    &_right {
+      text-align: right;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid $layoutSecondaryBorderColor;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .gems-stats-table__info-icon {
+        opacity: 0;
+      }
+
+      .gems-stats-table__cell {
+        background-color: color($layoutSecondaryBg lightness(+2%));
+      }
+    }
+  }
+
+  &__cell {
+    padding: 12px $layoutFactor;
+    font-size: 14px;
+    text-align: left;
+    color: $textColorPrimary;
+
+    &_title {
+      font-weight: 600;
+    }
+
+    &_right {
+      text-align: right;
+    }
+  }
+
+  &__info-icon {
+    margin: -2px 0 0 5px;
+    color: #b1b5b8;
+  }
+}

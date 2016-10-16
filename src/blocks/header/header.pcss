@@ -1,30 +1,34 @@
 .header {
   background-color: $themePrimary;
-  padding: calc($layoutCommonPadding / 2) 0;
+  padding: calc($layoutHeaderHeight / 4) 0;
 
   &__content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media (--tablet) {
-      flex-direction: column;
-    }
+    justify-content: flex-start;
+    align-items: flex-end;
+    line-height: calc($layoutHeaderHeight / 2);
   }
 
   &__logo {
-    line-height: calc($layoutCommonPadding * 2);
+    font-family: $fontFamily;
+    font-size: calc($layoutHeaderHeight / 2);
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__description {
+    font-family: $fontFamily;
+    font-size: $layoutFactor;
+    line-height: $layoutFactor;
+    vertical-align: baseline;
+    color: #fff;
+    margin-left: calc($layoutFactor / 2);
   }
 
   &__search {
+    font-family: $fontFamily;
     flex-grow: 1;
-    max-width: 60%;
-    margin-left: calc($layoutCommonPadding * 2);
-
-    @media (--tablet) {
-      max-width: none;
-      width: 100%;
-      margin: calc($layoutCommonPadding / 2) 0 0;
-    }
+    margin-left: 150px;
   }
 }

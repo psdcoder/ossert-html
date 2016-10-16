@@ -10,21 +10,21 @@
   background-color: $layoutPrimaryBg;
 
   &__content {
-    margin-top: $layoutCommonPadding;
     flex-grow: 1;
   }
 
-  &__content-section {
-    margin-top: calc($layoutCommonPadding * 2);
+  &__content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: calc($layoutFactor * 4);
   }
 
-  &__content-inner_full-width {
-    margin-left: -calc($layoutCommonPadding * 1.5);
-    margin-right: -calc($layoutCommonPadding * 1.5);
+  &__content-section {
+    width: 780px;
+  }
 
-    @media (--tablet) {
-      margin-left: -$layoutCommonPadding;
-      margin-right: -$layoutCommonPadding;
-    }
+  &__sidebar-section {
+    width: 280px;
   }
 }

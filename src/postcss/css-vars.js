@@ -1,33 +1,24 @@
 module.exports = {
-    layoutMaxWidth: '990px',
-    layoutCommonPadding: '20px',
+    layoutMaxWidth: '1180px',
+    layoutHeaderHeight: '72px',
+    layoutFactor: '16px',
 
-    fontFamily: 'Helvetica, Arial, sans-serif',
+    // TEXT
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
 
-    layoutPrimaryBg: '#ecf0f1',
-    layoutSecondaryBg: '#fff',
-    layoutBorder: '#bdc3c7',
-    layoutBorderRadius: '2px',
-    separatorBorder: '#ced2d4',
+    textColorPrimary: '#333',
+    textLinkColor: '#4a90e2',
+
+    // COLORS
+    layoutPrimaryBg: '#fff',
+    layoutSecondaryBg: '#efefef',
+
+    layoutBorderColor: '#d1d1d1',
+    layoutSecondaryBorderColor: '#efefef',
 
     themePrimary: '#2c3e50',
 
-    textColorPrimary: '#2c3e50',
-    textColorSecondary: '#34495e',
-    textColorSubheaders: '#8597ad',
-    textColorMuted: '#727f8e',
-
-    controlHeight: '40px',
-    iconSize: '32px',
-
-    linkColor: '#5788b9',
-
-    buttonPrimaryColor: '#5788b9',
-    buttonPrimaryBg: '#fff',
-    buttonSecondaryColor: '#727f8e',
-    buttonSecondaryBg: '#fff',
-
-    indicatorCircleSize: '40px',
+    indicatorCircleSize: '36px',
     indicatorRateA: '#0ac53d',
     indicatorRateB: '#a9bf38',
     indicatorRateC: '#ecc217',

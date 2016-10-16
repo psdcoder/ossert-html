@@ -1,61 +1,25 @@
 .gem {
-  &__info-row + &__info-row {
-    margin-top: $layoutCommonPadding;
+  &__description {
+    margin: calc($layoutFactor * 2) 0 0;
+    font-family: $fontFamily;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: $textColorPrimary;
   }
 
-  &__info-row-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: calc($layoutCommonPadding / 2);
-    background-color: #4e6473;
-
-    @media (--phone) {
-      flex-direction: column;
-      align-items: stretch;
-    }
+  &__links {
+    margin: $layoutFactor 0 0;
   }
 
-  &__info-row_description&__info-row_description {
-    margin: calc($layoutCommonPadding * 1.5) 0;
-    color: $textColorSecondary;
-  }
-
-  &__button-info {
-    padding: calc($layoutCommonPadding / 2);
-    margin: 0 calc($layoutCommonPadding / 2);
-    color: #fff;
+  &__link {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
     text-decoration: none;
 
-    @media (--phone) {
-      margin: 0;
+    & + & {
+      margin-left: calc($layoutFactor * 1.5);
     }
-
-    &:hover,
-    &:focus {
-      color: #e6f5ff;
-    }
-  }
-
-  &__button-info-icon {
-    position: relative;
-    top: -2px;
-    width: 16px;
-    height: 16px;
-  }
-
-  &__header {
-    margin: 0;
-    color: $textColorSecondary;
-    line-height: $indicatorCircleSize;
-  }
-
-  &__header-prefix {
-    vertical-align: middle;
-  }
-
-  &__indicators {
-    margin-left: auto;
   }
 }
