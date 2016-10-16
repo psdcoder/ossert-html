@@ -1,0 +1,93 @@
+.help-tooltip {
+  position: relative;
+  padding: 24px;
+  background-color: $layoutSecondaryBg;
+  border: 1px solid $layoutBorderColor;
+  border-radius: 8px;
+  z-index: 10;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: -28px;
+    z-index: 8;
+    display: block;
+    border: 14px solid transparent;
+    border-right-color: $layoutBorderColor;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -26px;
+    z-index: 9;
+    display: block;
+    border: 13px solid transparent;
+    border-right-color: $layoutSecondaryBg;
+  }
+
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header {
+    margin: 0;
+    font-family: $fontFamily;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__info-icon {
+    width: 24px;
+    height: 24px;
+    color: $themePrimary;
+  }
+
+  &__description {
+    margin: $layoutFactor 0;
+    font-family: $fontFamily;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__table-header-cell {
+    padding: 4px 6px 12px;
+    font-family: $fontFamily;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 600;
+    text-align: left;
+
+    &_right {
+      text-align: right;
+    }
+  }
+
+  &__table-cell {
+    padding: 4px 6px;
+    font-family: $fontFamily;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 600;
+    text-align: left;
+
+    &_right {
+      text-align: right;
+    }
+  }
+
+  &__table-mark {
+    font-size: 24px;
+  }
+}
