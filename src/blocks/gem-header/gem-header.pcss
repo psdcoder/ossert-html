@@ -1,34 +1,39 @@
 .gem-header {
   margin: 0;
 
-  &__inner {
-    position: relative;
-    z-index: 100;
-    margin: 0;
-  }
-
   &__heading {
-    margin: 0 auto;
+    margin: 0;
+    font-family: $fontFamily;
     font-size: 66px;
     font-weight: 600;
     line-height: 1;
   }
 
-  &__prefix {
-    vertical-align: middle;
-  }
-
-  &_sticky &__inner {
+  &__fixed {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 100;
+    padding: 12px calc($layoutFactor * 2) 16px;
     background-color: #fff;
     border-bottom: 1px solid $layoutSecondaryBg;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s ease-out, opacity 0.15s ease-out;
+
+    &_hidden {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
   }
 
-  &_sticky &__heading {
-    padding: 0 calc($layoutFactor * 2);
+  &__fixed-heading {
+    margin: 0;
+    font-family: $fontFamily;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 600;
   }
 }
