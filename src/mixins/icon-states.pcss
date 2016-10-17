@@ -1,6 +1,7 @@
 @define-mixin icon-states $color {
   > .icon {
     fill: $color;
+    transition: fill 0.1s ease-out;
   }
 
   &:hover {

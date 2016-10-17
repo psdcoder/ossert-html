@@ -1,4 +1,9 @@
+import $ from 'jquery';
 import rafThrottle from 'raf-throttle';
 import { onScroll } from './blocks/gem-header';
+import { init as helpTooltipInit } from './blocks/help-tooltip';
 
-window.addEventListener('scroll', rafThrottle(onScroll));
+$(() => {
+  $(window).on('scroll', rafThrottle(onScroll));
+  helpTooltipInit();
+});

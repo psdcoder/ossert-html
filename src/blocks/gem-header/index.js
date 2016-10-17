@@ -1,17 +1,11 @@
-const supportPageOffset = window.pageXOffset !== undefined;
-const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-const header = document.getElementById('sticky-project-header');
-const fixed = header.querySelector('.gem-header__fixed');
+import $ from 'jquery';
+const $header = $('#sticky-project-header');
+const $fixed = $header.find('.gem-header__fixed');
+
+const $document = $(document);
 
 export function onScroll() {
-    const windowScroll = getWindowScroll();
-    const fix = (header.offsetTop + header.offsetHeight + 15) < windowScroll;
+  const fix = ($header.offset().top + $header.height() + 15) < $document.scrollTop();
 
-    fixed.classList.toggle('gem-header__fixed_hidden', !fix);
-}
-
-function getWindowScroll() {
-    return supportPageOffset
-        ? window.pageYOffset
-        : (isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop);
+  $fixed.toggleClass('gem-header__fixed_hidden', !fix);
 }
