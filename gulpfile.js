@@ -82,19 +82,7 @@ gulp.task('blocks:assets', () => {
 gulp.task('blocks:js', () => {
   return gulp.src(JS_MAIN)
     .pipe($.plumber({ errorHandler: notifyOnErrorFactory('Js') }))
-    .pipe(webpackStream({
-      output: {
-        filename: '[name].js'
-      },
-      resolve: { extensions: ['', '.js', '.jsx', '.json'] },
-      module: {
-        loaders: [
-          { test: /\.js$/, loader: 'babel' },
-          { test: /\.mustache/, loader: 'mustache?minify' }
-        ]
-      },
-      devtool: 'source-map'
-    }))
+    .pipe(webpackStream(require('./webpack.config')))
     .pipe(gulp.dest(BUILD_DIR));
 });
 
