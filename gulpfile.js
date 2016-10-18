@@ -138,7 +138,8 @@ gulp.task('serve', () => {
 
 gulp.task('serve:watch', () =>{
   bs.init({
-    server: BUILD_DIR
+    server: BUILD_DIR,
+    port: process.env.PORT || 3000
   });
   bs.watch(BUILD_DIR).on('change', bs.reload);
 });
