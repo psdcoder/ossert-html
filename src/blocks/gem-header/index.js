@@ -5,9 +5,7 @@ const $fixed = $header.find('.gem-header__fixed');
 const $document = $(document);
 
 export function onScroll() {
-  const fix = (getHeaderOffsetTop() + $header.height() + 15) < $document.scrollTop();
-
-  $fixed.toggleClass('gem-header__fixed_hidden', !fix);
+  $fixed.toggleClass('gem-header__fixed_hidden', !isWillBeVisible($document.scrollTop() - $header.height() - 15));
 }
 
 export function getHeight() {

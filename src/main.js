@@ -7,6 +7,7 @@ import { smoothAnchorScrolling } from './blocks/link';
 
 $(() => {
   $(window).on('scroll', rafThrottle(onScroll));
+  onScroll();
 
   smoothAnchorScrolling();
 

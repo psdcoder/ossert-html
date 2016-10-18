@@ -9,7 +9,7 @@
 </head>
 <body class="layout">
     <!-- svgSprite -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="width-container header__content">
             <a href="/" class="logo header__logo">Ossert.</a>
             <span class="header__description">Open-Source Maturity & Maintenance Certification</span>
@@ -30,8 +30,24 @@
                     <div class="gem-header" id="sticky-project-header">
                         <h1 class="gem-header__heading">gon</h1>
                         <div class="gem-header__fixed gem-header__fixed_hidden">
-                            <div class="width-container">
+                            <div class="gem-header__fixed-container width-container">
                                 <h1 class="gem-header__fixed-heading">gon</h1>
+                                <ul class="gem-header__fixed-items">
+                                    <li class="gem-header__fixed-item">
+                                        <a href="#popularity" class="gem-header__fixed-item-link link">Popularity</a>
+                                    </li>
+                                    <li class="gem-header__fixed-item">
+                                        <a href="#maintenance" class="gem-header__fixed-item-link link">Maintenance</a>
+                                    </li>
+                                    <li class="gem-header__fixed-item">
+                                        <a href="#maturity" class="gem-header__fixed-item-link link">Maturity</a>
+                                    </li>
+                                </ul>
+                                <a href="#header" class="gem-header__top-link">
+                                    <svg class="icon gem-header__top-link-icon">
+                                        <use xlink:href="#icon_type_to-top"></use>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
