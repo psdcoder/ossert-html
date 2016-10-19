@@ -1,17 +1,18 @@
 .header {
   background-color: $themePrimary;
-  padding: calc($layoutHeaderHeight / 4) 0;
 
   &__content {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
-    line-height: calc($layoutHeaderHeight / 2);
+    align-items: center;
+    height: calc($layoutFactor * 6);
   }
 
   &__logo {
+    display: inline-block;
     font-family: $fontFamily;
-    font-size: calc($layoutHeaderHeight / 2);
+    font-size: calc($layoutFactor * 4);
+    line-height: calc($layoutFactor * 4);
     font-weight: 600;
     text-decoration: none;
     color: #fff;
@@ -19,16 +20,15 @@
 
   &__description {
     font-family: $fontFamily;
-    font-size: $layoutFactor;
-    line-height: $layoutFactor;
-    vertical-align: baseline;
+    font-size: 16px;
+    line-height: 19px;
     color: #fff;
     margin-left: calc($layoutFactor / 2);
   }
 
   &__search {
-    font-family: $fontFamily;
-    flex-grow: 1;
-    margin-left: 150px;
+    margin-left: auto;
+
+    @mixin columns 5;
   }
 }

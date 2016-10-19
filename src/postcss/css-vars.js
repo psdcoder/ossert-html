@@ -1,7 +1,8 @@
 module.exports = {
-  layoutMaxWidth: '1180px',
-  layoutHeaderHeight: '72px',
-  layoutFactor: '16px',
+  layoutGridColumn: '88px',
+  layoutGridGutter: '12px',
+  layoutMaxWidth: '1176px',
+  layoutFactor: '12px',
 
   // TEXT
   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',

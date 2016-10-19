@@ -3,13 +3,15 @@
 
   &__input {
     display: block;
-    height: calc($layoutHeaderHeight / 2);
+    height: 36px;
     width: 100%;
-    padding: 6px calc($layoutHeaderHeight / 2) 6px 6px;
+    padding: calc($layoutFactor / 2) 36px calc($layoutFactor / 2) $layoutFactor;
     border: 1px solid;
     border-radius: 2px;
-    font-size: 17px;
-    line-height: calc($layoutHeaderHeight / 2);
+    font-family: $fontFamily;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
     color: #4c4d58;
 
     &::placeholder {
@@ -25,8 +27,8 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: calc($layoutHeaderHeight / 2);
-    height: calc($layoutHeaderHeight / 2);
+    width: 36px;
+    height: 36px;
     background-color: transparent;
     border: none;
     cursor: pointer;

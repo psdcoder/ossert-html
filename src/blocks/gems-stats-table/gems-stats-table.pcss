@@ -9,12 +9,19 @@
   &__header-cell {
     padding: 12px $layoutFactor;
     font-size: 14px;
+    line-height: 19px;
     font-weight: 700;
     text-align: left;
     color: $textColorPrimary;
 
-    &_right {
+    &_values-column {
       text-align: right;
+
+      @mixin columns 2;
+    }
+
+    &_values-column-penultimate {
+      padding-right: 0;
     }
   }
 
@@ -39,6 +46,7 @@
   &__cell {
     padding: 12px $layoutFactor;
     font-size: 14px;
+    line-height: 19px;
     text-align: left;
     color: $textColorPrimary;
     transition: background-color 0.15s ease-out;
@@ -47,8 +55,14 @@
       font-weight: 600;
     }
 
-    &_right {
+    &_values-column {
       text-align: right;
+
+      @mixin columns 2;
+    }
+
+    &_values-column-penultimate {
+      padding-right: 0;
     }
   }
 

@@ -9,8 +9,8 @@
     <thead>
         <tr>
             <th class="help-tooltip__table-header-cell">Rank</th>
-            <th class="help-tooltip__table-header-cell help-tooltip__table-header-cell_right">This year</th>
-            <th class="help-tooltip__table-header-cell help-tooltip__table-header-cell_right">Total</th>
+            <th class="help-tooltip__table-header-cell help-tooltip__table-header-cell_values-column help-tooltip__table-header-cell_values-column-penultimate">This year</th>
+            <th class="help-tooltip__table-header-cell help-tooltip__table-header-cell_values-column">Total</th>
         </tr>
     </thead>
     <tbody>
@@ -21,8 +21,8 @@
                     <use xlink:href="#icon_type_mark-{{type}}"></use>
                 </svg>
             </td>
-            <td class="help-tooltip__table-cell help-tooltip__table-cell_right">&gt; {{year}}</td>
-            <td class="help-tooltip__table-cell help-tooltip__table-cell_right">&gt; {{total}}</td>
+            <td class="help-tooltip__table-cell help-tooltip__table-cell_values-column help-tooltip__table-cell_values-column-penultimate">&gt;&nbsp;{{year}}</td>
+            <td class="help-tooltip__table-cell help-tooltip__table-cell_values-column">&gt;&nbsp;{{total}}</td>
         </tr>
     {{/ranks}}
     </tbody>

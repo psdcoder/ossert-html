@@ -1,6 +1,6 @@
 .help-tooltip {
   position: relative;
-  padding: 24px;
+  padding: calc($layoutFactor * 2);
   background-color: $layoutSecondaryBg;
   border: 1px solid $layoutBorderColor;
   border-radius: 8px;
@@ -53,7 +53,7 @@
     margin: 0;
     font-family: $fontFamily;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 30px;
     font-weight: 700;
   }
 
@@ -67,38 +67,67 @@
     margin: $layoutFactor 0;
     font-family: $fontFamily;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 19px;
     font-weight: 600;
   }
 
   &__table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: calc($layoutFactor * 2) 0 0;
   }
 
   &__table-header-cell {
-    padding: 4px 6px 12px;
+    padding: calc($layoutFactor / 2) calc($layoutFactor / 2) 12px;
     font-family: $fontFamily;
     font-size: 14px;
-    line-height: 1;
+    line-height: 19px;
     font-weight: 600;
     text-align: left;
 
-    &_right {
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &_values-column {
       text-align: right;
+
+      @mixin columns 1;
+    }
+
+    &_values-column-penultimate {
+      padding-right: 0;
     }
   }
 
   &__table-cell {
-    padding: 4px 6px;
+    padding: calc($layoutFactor / 2);
     font-family: $fontFamily;
     font-size: 14px;
     line-height: 1;
     font-weight: 600;
     text-align: left;
 
-    &_right {
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &_values-column {
       text-align: right;
+
+      @mixin columns 1;
+    }
+
+    &_values-column-penultimate {
+      padding-right: 0;
     }
   }
 
