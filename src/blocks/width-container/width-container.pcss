@@ -1,12 +1,17 @@
 .width-container {
-  width: 100%;
-  max-width: $layoutMaxWidth;
+  max-width: 100%;
+  width: calc($layoutGridColumn * 12px + $layoutGridGutter * 12px);
   margin-left: auto;
   margin-right: auto;
+  padding-left: calc($layoutFactor / 2px);
+  padding-right: calc($layoutFactor / 2px);
 
   @media (--desktop) {
-    width: auto;
-    margin-left: $layoutFactor;
-    margin-right: $layoutFactor;
+    width: calc($layoutGridColumn * 9px + $layoutGridGutter * 9px);
+  }
+
+  @media (--tablet) {
+    padding-left: calc($layoutFactor * 2px);
+    padding-right: calc($layoutFactor * 2px);
   }
 }

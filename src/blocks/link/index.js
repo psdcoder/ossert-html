@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { isWillBeVisible as headerWillBeVisible, getHeight as getHeaderHeight } from '../gem-header';
 
-const CONST_OFFSET = 30;
+const CONST_OFFSET = 15;
 
 export function smoothAnchorScrolling() {
   const $htmlBody = $('html, body');

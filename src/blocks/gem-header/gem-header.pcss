@@ -32,7 +32,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: calc($layoutFactor / 2) 0;
+    padding: calc($layoutFactor / 2px) 0;
   }
 
   &__fixed-heading {
@@ -50,10 +50,14 @@
     margin: 0 0 0 auto;
     padding: 0;
     list-style: none;
+
+    @media (--phone) {
+      display: none;
+    }
   }
 
   &__fixed-item {
-    margin-left: $layoutFactor;
+    margin-left: calc($layoutFactor * 1px);
   }
 
   &__fixed-item-link {
@@ -70,10 +74,14 @@
     align-items: center;
     width: calc($layoutFactor / 2 + 24px);
     height: calc($layoutFactor / 2 + 24px);
-    margin-left: calc($layoutFactor * 2);
+    margin-left: calc($layoutFactor * 2px);
     border-radius: 50%;
     background-color: $layoutBorderColor;
     transition: background-color 0.1s ease-out;
+
+    @media (--phone) {
+      margin-left: auto;
+    }
 
     &:hover,
     &:focus {

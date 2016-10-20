@@ -1,17 +1,19 @@
 .help-tooltip {
   position: relative;
-  padding: calc($layoutFactor * 2);
+  padding: calc($layoutFactor * 2px);
   background-color: $layoutSecondaryBg;
   border: 1px solid $layoutBorderColor;
   border-radius: 8px;
   z-index: 10;
   opacity: 1;
   transform: translate3d(0, 0, 0);
+  visibility: visible;
   transition: opacity 0.15s ease-out, transform 0.1s ease-out;
 
   &_hidden {
-    transform: translate3d(30px, 0, 0);
+    transform: translate3d(-30px, 0, 0);
     opacity: 0;
+    visibility: hidden;
   }
 
   &__arrow {
@@ -64,7 +66,7 @@
   }
 
   &__description {
-    margin: $layoutFactor 0;
+    margin: calc($layoutFactor * 1px) 0;
     font-family: $fontFamily;
     font-size: 14px;
     line-height: 19px;
@@ -74,11 +76,11 @@
   &__table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: calc($layoutFactor * 2) 0 0;
+    margin-top: calc($layoutFactor * 2px) 0 0;
   }
 
   &__table-header-cell {
-    padding: calc($layoutFactor / 2) calc($layoutFactor / 2) 12px;
+    padding: calc($layoutFactor / 2px) calc($layoutFactor / 2px) 12px;
     font-family: $fontFamily;
     font-size: 14px;
     line-height: 19px;
@@ -105,7 +107,7 @@
   }
 
   &__table-cell {
-    padding: calc($layoutFactor / 2);
+    padding: calc($layoutFactor / 2px);
     font-family: $fontFamily;
     font-size: 14px;
     line-height: 1;
