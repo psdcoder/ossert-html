@@ -17,9 +17,10 @@
     line-height: 1.4;
     font-weight: 600;
     text-decoration: none;
+    margin-right: calc($layoutFactor * 2px);
 
-    & + & {
-      margin-left: calc($layoutFactor * 2px);
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
